@@ -70,6 +70,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+  
+  a {
+    text-decoration: none;
+  }
 
   ul, menu {
     list-style: none;
@@ -89,6 +93,7 @@ const GlobalStyle = createGlobalStyle`
     --neutral: #626687;
     --white: #FFF;
     --green: #10B981;
+    --greenDark: #047857;
     --grey: #888B97;
   }
 `;

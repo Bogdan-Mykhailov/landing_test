@@ -1,19 +1,22 @@
 import styled from "styled-components";
 
-export const Hero = styled.div`
+export const HeaderWrapper = styled.div`
   display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-`;
-
-export const LeftSide = styled.div`
-  display: flex;
-  padding-top: 45px;
-  padding-left: 120px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
 `;
 
 export const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
+  cursor: pointer;
 `;
 
 export const MainLogo = styled.img`
@@ -30,71 +33,38 @@ export const LogoTitle = styled.p`
   color: var(--headline);
 `;
 
-export const TitleWrapper = styled.div`
-  margin-top: 100px;
+export const NavMenu = styled.menu`
+  display: flex;
+  margin-left: auto;
+  margin-right: 56px;
 `;
 
-export const MainTitle = styled.h1`
-  font-family: Lexend900, sans-serif;
-  font-size: 40px;
-  line-height: 50px;
-  text-transform: capitalize;
-  color: var(--headline);
-`;
-
-export const SubTitle = styled.p`
-  font-family: Lexend300, sans-serif;
-  font-size: 16px;
-  line-height: 28px;
-  color: var(--neutral);
-  opacity: 0.75;
-  margin-top: 24px;
-`;
-
-export const SearchWrapper = styled.div`
+export const MenuItem = styled.li`
   display: flex;
   align-items: center;
-  padding: 4px 4px 4px 24px;
-  gap: 16px;
-  background: var(--white);
-  border: 1px solid #E0E3EB;
+  justify-content: center;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 32px;
-  margin-top: 32px;
-`;
-
-export const SearchIcon = styled.img`
-  width: 24px;
-  height: 24px;
-`;
-
-export const PartnershipWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: 32px;
-`;
-
-export const PartnershipTitle = styled.p`
-  font-size: 16px;
-  line-height: 32px;
-  color: var(--grey);
-  font-family: Lexend300, sans-serif;
-`;
-
-export const PartnershipList = styled.ul`
-  display: flex;
-`;
-
-export const ListItem = styled.li`
-  &:not(:last-child) {
-    margin-right: 32px;
+  font-size: 14px;
+  color: var(--white);
+  line-height: 18px;
+  font-family: Lexend600, sans-serif;
+  cursor: pointer;
+  :not(:last-child) {
+    margin-right: 24px;
   }
 `;
 
-export const RightSide = styled.div`
-  width: 720px;
-  height: 720px;
-  background-image: url("../../assets/images/header.jpg");
-  background-size: cover;
-  background-position: left;
-  border-bottom-left-radius: 80px;
+export const MenuButton = styled.button`
+  font-size: 14px;
+  line-height: 22px;
+  font-family: Lexend600, sans-serif;
+  color: var(--greenDark);
+  padding: 12px 24px;
+  background: #D1FAE5;
+  border-radius: 32px;
+  border: none;
+  cursor: pointer;
 `;
