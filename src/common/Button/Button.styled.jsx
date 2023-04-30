@@ -13,4 +13,5 @@ export const ButtonStyled = styled.button`
   font-size: 14px;
   line-height: 22px;
   gap: 4px;
+  cursor: pointer;
 `;

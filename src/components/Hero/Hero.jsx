@@ -32,13 +32,13 @@ import traveloka from '../../assets/icons/partners/traveloka.svg';
 import ticketCom from '../../assets/icons/partners/ticketCom.svg';
 import airbnb from '../../assets/icons/partners/airbnb.svg';
 import tripadvisor from '../../assets/icons/partners/tripadvisor.svg';
-import vila from '../../assets/images/hero/vila.jpg';
-import girl3 from '../../assets/images/hero/girl3.jpg';
-import girl2 from '../../assets/images/hero/girl2.jpg';
-import girl1 from '../../assets/images/hero/girl1.jpg';
-import man from '../../assets/images/hero/man.jpg';
-import { Autoplay, Navigation, Pagination } from 'swiper';
-import { Container } from '../../common/Container/Container';
+import vila from '../../assets/images/vila.jpg';
+import girl3 from '../../assets/images/girl3.jpg';
+import girl2 from '../../assets/images/girl2.jpg';
+import girl1 from '../../assets/images/girl1.jpg';
+import man from '../../assets/images/man.jpg';
+import { Autoplay, Pagination } from 'swiper';
+import { Container } from '../../common/Container';
 
 export const Hero = () => {
   const partners = [
@@ -105,12 +105,12 @@ export const Hero = () => {
           <SwiperStyled
             slidesPerView={'auto'}
             spaceBetween={16}
-            freeMode={true}
+            // freeMode={true}
             loop={true}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
+            // autoplay={{
+            //   delay: 3000,
+            //   disableOnInteraction: false,
+            // }}
             pagination={{
               dynamicBullets: true,
               clickable: true,

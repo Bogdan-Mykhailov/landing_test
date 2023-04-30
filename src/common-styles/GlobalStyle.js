@@ -95,6 +95,7 @@ const GlobalStyle = createGlobalStyle`
     --green: #10B981;
     --greenDark: #047857;
     --grey: #888B97;
+    --gold: #F59E0B;
   }
 `;
 

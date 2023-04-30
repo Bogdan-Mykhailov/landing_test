@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import mainLogo from '../../assets/images/hero/header.jpg';
+import mainLogo from '../../assets/images/header.jpg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 export const HeroStyled = styled.div`
@@ -106,6 +106,21 @@ export const SwiperStyled = styled(Swiper)`
   margin-bottom: 48px;
   border-bottom-left-radius: 32px;
   border-top-left-radius: 32px;
+  .swiper-pagination {
+    bottom: 120px;
+  }
+  
+  .swiper-pagination-bullet {
+    background: blueviolet;
+    width: 20px;
+    height: 20px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: crimson;
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 export const SwiperSlideStyled = styled(SwiperSlide)`

@@ -1,7 +1,7 @@
 import GlobalStyle from './common-styles/GlobalStyle';
 import { Hero } from './components/Hero';
 import { AppWrapper } from './App.styled';
-import { Header } from './components';
+import { Header, Recommendation } from './components';
 import React from 'react';
 
 export function App() {
@@ -10,6 +10,7 @@ export function App() {
       <GlobalStyle/>
         <Header/>
         <Hero/>
+      <Recommendation/>
     </AppWrapper>
   );
 }

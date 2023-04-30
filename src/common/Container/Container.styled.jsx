@@ -5,7 +5,7 @@ export const ContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 120px;
 
   @media ${devices.tab} {
     max-width: 1303px;

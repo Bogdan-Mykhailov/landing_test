@@ -1,5 +1,3 @@
-import styled from 'styled-components';
-
 const size = {
   m: '480px',
   t: '768px',
