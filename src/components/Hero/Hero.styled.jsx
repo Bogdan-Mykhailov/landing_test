@@ -24,7 +24,7 @@ export const MainTitle = styled.h1`
   color: var(--headline);
 `;
 
-export const SelectedText = styled.h2`
+export const SelectedText = styled.span`
   font-family: Lexend700, sans-serif;
   font-size: 40px;
   line-height: 50px;

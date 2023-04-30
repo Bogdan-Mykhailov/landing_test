@@ -32,7 +32,7 @@ export const SelectStyled = styled.menu`
   transform: translate(-50%, -50%);
 `;
 
-export const ItemStyled = styled.li`
+export const ItemStyled = styled.a`
   text-align: center;
   border-radius: 32px;
   font-size: 14px;

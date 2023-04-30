@@ -32,7 +32,7 @@ import traveloka from '../../assets/icons/partners/traveloka.svg';
 import ticketCom from '../../assets/icons/partners/ticketCom.svg';
 import airbnb from '../../assets/icons/partners/airbnb.svg';
 import tripadvisor from '../../assets/icons/partners/tripadvisor.svg';
-import vila from '../../assets/images/vila.jpg';
+import villa from '../../assets/images/villa.jpg';
 import girl3 from '../../assets/images/girl3.jpg';
 import girl2 from '../../assets/images/girl2.jpg';
 import girl1 from '../../assets/images/girl1.jpg';
@@ -103,14 +103,14 @@ export const Hero = () => {
 
         <RightSide>
           <SwiperStyled
-            slidesPerView={'auto'}
+            slidesPerView='auto'
             spaceBetween={16}
             // freeMode={true}
             loop={true}
-            // autoplay={{
-            //   delay: 3000,
-            //   disableOnInteraction: false,
-            // }}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
             pagination={{
               dynamicBullets: true,
               clickable: true,
@@ -119,7 +119,7 @@ export const Hero = () => {
           >
             <SwiperSlideStyled>
               <SliderItem>
-                <SliderImgList width>
+                <SliderImgList width='width'>
                   <SliderImg src={girl1} alt="Satisfied people"/>
                   <SliderImg position="28px" src={man} alt="Satisfied people"/>
                   <SliderImg position="56px" src={girl2} alt="Satisfied people"/>
@@ -133,7 +133,7 @@ export const Hero = () => {
 
             <SwiperSlideStyled>
               <SliderItem>
-                <SliderImg type={vila} src={vila} alt="Vila"/>
+                <SliderImg type={villa} src={villa} alt="Villa"/>
                 <ContentWrapper>
                   <SliderTitle>56 Houses</SliderTitle>
                   <SliderSubTitle>Sold Monthly</SliderSubTitle>
@@ -153,7 +153,7 @@ export const Hero = () => {
 
             <SwiperSlideStyled>
               <SliderItem>
-                <SliderImgList width>
+                <SliderImgList width='width'>
                   <SliderImg src={girl1} alt=""/>
                   <SliderImg position="28px" src={man} alt=""/>
                   <SliderImg position="56px" src={girl2} alt=""/>
@@ -167,7 +167,7 @@ export const Hero = () => {
 
             <SwiperSlideStyled>
               <SliderItem>
-                <SliderImg type={vila} src={vila} alt="Vila"/>
+                <SliderImg type={villa} src={villa} alt="Villa"/>
                 <ContentWrapper>
                   <SliderTitle>56 Houses</SliderTitle>
                   <SliderSubTitle>Sold Monthly</SliderSubTitle>

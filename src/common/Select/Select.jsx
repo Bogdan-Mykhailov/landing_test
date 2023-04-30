@@ -29,7 +29,7 @@ export const Select = ({title, icon}) => {
         </li>
 
         <li onClick={handleToggleClick}>
-          <ItemStyled href="/">Vila</ItemStyled>
+          <ItemStyled href="/">Villa</ItemStyled>
         </li>
 
         <li onClick={handleToggleClick}>
