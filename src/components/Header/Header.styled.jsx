@@ -1,16 +1,25 @@
 import styled from "styled-components";
+import { devices } from '../../common-styles/MediaQueries';
 
-export const HeaderWrapper = styled.div`
+export const HeaderWrapper = styled.header`
+  z-index: 1;
   display: flex;
-  width: 1200px;
-  margin: 0 auto;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin: 0 auto;
   position: absolute;
   top: 40px;
   left: 0;
   right: 0;
+  
+  @media ${devices.tab} {
+    padding: 0 120px;
+  }
+  
+  @media ${devices.desk} {
+    max-width: 1200px;
+  }
 `;
 
 export const LogoWrapper = styled.div`
@@ -20,8 +29,8 @@ export const LogoWrapper = styled.div`
 `;
 
 export const MainLogo = styled.img`
-  width: 24px;
-  height: 24px;
+  width: 36px;
+  height: 36px;
   margin-right: 12px;
 `;
 
@@ -31,6 +40,16 @@ export const LogoTitle = styled.p`
   line-height: 20px;
   text-transform: capitalize;
   color: var(--headline);
+`;
+
+export const NawWrapper = styled.div`
+  display: none;
+  align-items: center;
+  
+  @media ${devices.tab} {
+    max-width: 768px;
+    display: flex;
+  }
 `;
 
 export const NavMenu = styled.menu`

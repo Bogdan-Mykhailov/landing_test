@@ -6,6 +6,7 @@ import {
   MainLogo, MenuButton,
   MenuItem,
   NavMenu,
+  NawWrapper,
 } from './Header.styled';
 import logo from '../../assets/icons/logo.svg';
 import arrowDown from '../../assets/icons/arrow_down.svg';
@@ -19,16 +20,18 @@ export const Header = () => {
         <LogoTitle>Hounter</LogoTitle>
       </LogoWrapper>
 
-        <NavMenu>
-          <MenuItem>About Us</MenuItem>
-          <MenuItem>Article</MenuItem>
-          <Select
-            title='Property'
-            icon={arrowDown}
-          />
-        </NavMenu>
+         <NawWrapper>
+           <NavMenu>
+             <MenuItem>About Us</MenuItem>
+             <MenuItem>Article</MenuItem>
+             <Select
+               title='Property'
+               icon={arrowDown}
+             />
+           </NavMenu>
 
-        <MenuButton>Sign Up!</MenuButton>
+           <MenuButton>Sign Up!</MenuButton>
+         </NawWrapper>
     </HeaderWrapper>
   );
 };

@@ -4,6 +4,7 @@ import {
   SelectButton,
   SelectIcon,
   SelectStyled,
+  SelectWrapper,
 } from './Select.styled';
 
 export const Select = ({title, icon}) => {
@@ -14,7 +15,7 @@ export const Select = ({title, icon}) => {
   };
 
   return (
-    <>
+    <SelectWrapper>
       <SelectButton
         toggle={toggle}
         onClick={handleToggleClick}
@@ -35,6 +36,6 @@ export const Select = ({title, icon}) => {
           <ItemStyled href="/">Apartment</ItemStyled>
         </li>
       </SelectStyled>
-    </>
+    </SelectWrapper>
   );
 };

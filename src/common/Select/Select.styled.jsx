@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const SelectWrapper = styled.div`
+  position: relative;
+  display: inline-block;
+`;
+
 export const SelectButton = styled.button`
   display: flex;
   align-items: center;
@@ -17,13 +22,14 @@ export const SelectButton = styled.button`
 `;
 
 export const SelectStyled = styled.menu`
-  display: ${props => (
-    props.toggle
-      ? 'block'
-      : 'none')};
+  display: ${({ toggle }) => (
+          toggle
+                  ? 'block'
+                  : 'none')};
   position: absolute;
-  top: 45px;
-  right: 170px;
+  top: 85px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 export const ItemStyled = styled.li`
@@ -42,8 +48,8 @@ export const ItemStyled = styled.li`
 `;
 
 export const SelectIcon = styled.img`
-  transform: ${props => (
-          props.toggle
-      ? 'rotate(180deg)'
-      : 'rotate(0deg)')}
+  transform: ${({toggle}) => (
+          toggle
+                  ? 'rotate(180deg)'
+                  : 'rotate(0deg)')}
 `;

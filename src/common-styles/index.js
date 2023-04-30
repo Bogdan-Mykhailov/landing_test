@@ -1,1 +1,1 @@
-export * from './Container.styled';
+export * from '../common/Container/Container.styled';
