@@ -140,7 +140,7 @@ export const SliderItem = styled.div`
 
 export const SliderImgList = styled.div`
   position: relative;
-  width: ${({ width }) => width ? '112px' : '100%'};
+  width: ${({ params }) => params ? '112px' : '56px'};
 `;
 
 export const SliderImg = styled.img`

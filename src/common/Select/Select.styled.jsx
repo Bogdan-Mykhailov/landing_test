@@ -32,19 +32,22 @@ export const SelectStyled = styled.menu`
   transform: translate(-50%, -50%);
 `;
 
-export const ItemStyled = styled.a`
+export const ItemStyled = styled.li`
   text-align: center;
   border-radius: 32px;
-  font-size: 14px;
-  color: var(--white);
-  line-height: 30px;
-  font-family: Lexend600, sans-serif;
   cursor: pointer;
   padding: 0 15px;
 
   :hover {
     background: rgba(255, 255, 255, 0.1);
   }
+`;
+
+export const ItemLink = styled.a`
+  font-size: 14px;
+  color: var(--white);
+  line-height: 30px;
+  font-family: Lexend600, sans-serif;
 `;
 
 export const SelectIcon = styled.img`

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {
+  ItemLink,
   ItemStyled,
   SelectButton,
   SelectIcon,
@@ -24,17 +25,17 @@ export const Select = ({title, icon}) => {
         <SelectIcon toggle={toggle} src={icon} alt="Arrow down"/>
       </SelectButton>
       <SelectStyled toggle={toggle}>
-        <li onClick={handleToggleClick} >
-          <ItemStyled href="/">House</ItemStyled>
-        </li>
+        <ItemStyled onClick={handleToggleClick} >
+          <ItemLink href="/">House</ItemLink>
+        </ItemStyled>
 
-        <li onClick={handleToggleClick}>
-          <ItemStyled href="/">Villa</ItemStyled>
-        </li>
+        <ItemStyled onClick={handleToggleClick}>
+          <ItemLink href="/">Villa</ItemLink>
+        </ItemStyled>
 
-        <li onClick={handleToggleClick}>
-          <ItemStyled href="/">Apartment</ItemStyled>
-        </li>
+        <ItemStyled onClick={handleToggleClick}>
+          <ItemLink href="/">Apartment</ItemLink>
+        </ItemStyled>
       </SelectStyled>
     </SelectWrapper>
   );

@@ -8,7 +8,7 @@ import man2 from '../assets/images/man2.jpg';
 import man3 from '../assets/images/man3.jpg';
 import girl4 from '../assets/images/girl4.jpg';
 import wallet from '../assets/icons/walet.svg'
-import home from '../assets/icons/house.svg'
+import home from '../assets/icons/newHome.svg'
 
 export const featuredHouse = [
   {

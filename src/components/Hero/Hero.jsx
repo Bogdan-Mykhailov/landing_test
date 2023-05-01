@@ -32,13 +32,9 @@ import traveloka from '../../assets/icons/partners/traveloka.svg';
 import ticketCom from '../../assets/icons/partners/ticketCom.svg';
 import airbnb from '../../assets/icons/partners/airbnb.svg';
 import tripadvisor from '../../assets/icons/partners/tripadvisor.svg';
-import villa from '../../assets/images/villa.jpg';
-import girl3 from '../../assets/images/girl3.jpg';
-import girl2 from '../../assets/images/girl2.jpg';
-import girl1 from '../../assets/images/girl1.jpg';
-import man from '../../assets/images/man.jpg';
-import { Autoplay, Pagination } from 'swiper';
+import { Autoplay } from 'swiper';
 import { Container } from '../../common/Container';
+import { data } from '../../data/heroSliderData';
 
 export const Hero = () => {
   const partners = [
@@ -103,7 +99,7 @@ export const Hero = () => {
 
         <RightSide>
           <SwiperStyled
-            slidesPerView='auto'
+            slidesPerView="auto"
             spaceBetween={16}
             // freeMode={true}
             loop={true}
@@ -111,79 +107,43 @@ export const Hero = () => {
               delay: 3000,
               disableOnInteraction: false,
             }}
-            pagination={{
-              dynamicBullets: true,
-              clickable: true,
-            }}
-            modules={[Autoplay, Pagination]}
+            modules={[Autoplay]}
           >
-            <SwiperSlideStyled>
-              <SliderItem>
-                <SliderImgList width='width'>
-                  <SliderImg src={girl1} alt="Satisfied people"/>
-                  <SliderImg position="28px" src={man} alt="Satisfied people"/>
-                  <SliderImg position="56px" src={girl2} alt="Satisfied people"/>
-                </SliderImgList>
-                <ContentWrapper>
-                  <SliderTitle>1K+ People</SliderTitle>
-                  <SliderSubTitle>Successfully Getting Home</SliderSubTitle>
-                </ContentWrapper>
-              </SliderItem>
-            </SwiperSlideStyled>
+            {data.map((tab) => {
+              const {id, images, title, subTitle} = tab;
+              const widthParams = images.length > 1 ? 'params' : '';
 
-            <SwiperSlideStyled>
-              <SliderItem>
-                <SliderImg type={villa} src={villa} alt="Villa"/>
-                <ContentWrapper>
-                  <SliderTitle>56 Houses</SliderTitle>
-                  <SliderSubTitle>Sold Monthly</SliderSubTitle>
-                </ContentWrapper>
-              </SliderItem>
-            </SwiperSlideStyled>
+              return (
+                <SwiperSlideStyled key={id}>
+                  <SliderItem>
+                    <SliderImgList params={widthParams}>
+                      {images.map(({
+                        id,
+                        image,
+                        alt,
+                        position,
+                        type
+                      }) => {
+                        return (
+                          <SliderImg
+                            key={id}
+                            type={type}
+                            src={image}
+                            alt={alt}
+                            position={position}
+                          />
+                        )
+                      })}
+                    </SliderImgList>
 
-            <SwiperSlideStyled>
-              <SliderItem>
-                <SliderImg src={girl3} alt="Girl with purpure bacground"/>
-                <ContentWrapper>
-                  <SliderTitle>4K+</SliderTitle>
-                  <SliderSubTitle>People Looking for New Homes</SliderSubTitle>
-                </ContentWrapper>
-              </SliderItem>
-            </SwiperSlideStyled>
-
-            <SwiperSlideStyled>
-              <SliderItem>
-                <SliderImgList width='width'>
-                  <SliderImg src={girl1} alt=""/>
-                  <SliderImg position="28px" src={man} alt=""/>
-                  <SliderImg position="56px" src={girl2} alt=""/>
-                </SliderImgList>
-                <ContentWrapper>
-                  <SliderTitle>1K+ People</SliderTitle>
-                  <SliderSubTitle>Successfully Getting Home</SliderSubTitle>
-                </ContentWrapper>
-              </SliderItem>
-            </SwiperSlideStyled>
-
-            <SwiperSlideStyled>
-              <SliderItem>
-                <SliderImg type={villa} src={villa} alt="Villa"/>
-                <ContentWrapper>
-                  <SliderTitle>56 Houses</SliderTitle>
-                  <SliderSubTitle>Sold Monthly</SliderSubTitle>
-                </ContentWrapper>
-              </SliderItem>
-            </SwiperSlideStyled>
-
-            <SwiperSlideStyled>
-              <SliderItem>
-                <SliderImg src={girl3} alt="Girl with purpure bacground"/>
-                <ContentWrapper>
-                  <SliderTitle>4K+</SliderTitle>
-                  <SliderSubTitle>People Looking for New Homes</SliderSubTitle>
-                </ContentWrapper>
-              </SliderItem>
-            </SwiperSlideStyled>
+                    <ContentWrapper>
+                      <SliderTitle>{title}</SliderTitle>
+                      <SliderSubTitle>{subTitle}</SliderSubTitle>
+                    </ContentWrapper>
+                  </SliderItem>
+                </SwiperSlideStyled>
+              );
+            })}
           </SwiperStyled>
         </RightSide>
       </HeroStyled>
