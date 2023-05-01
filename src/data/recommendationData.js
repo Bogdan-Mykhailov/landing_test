@@ -107,7 +107,7 @@ export const featuredHouse = [
     title: 'Woodlandside',
     subtitle: '$ 20.000.000',
     personalInfo: {
-      image: russel,
+      image: man3,
       name: 'Robert Fox',
       address: 'Dr. San Jose, South Dakota',
     },

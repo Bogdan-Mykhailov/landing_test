@@ -17,6 +17,8 @@ export const TitleWrapper = styled.div`
 `;
 
 export const MainTitle = styled.h1`
+  position: relative;
+  z-index: 2;
   font-family: Lexend900, sans-serif;
   font-size: 40px;
   line-height: 50px;
@@ -36,6 +38,7 @@ export const SelectedText = styled.span`
   0 1px var(--headline),
   1px 0 var(--headline),
     0 -1px var(--headline);
+  opacity: 0.6;
 `;
 
 export const SubTitle = styled.p`

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { SwiperSlide } from 'swiper/react';
 
 export const RecommendationWrapper = styled.div`
   display: flex;
@@ -17,4 +18,8 @@ export const NavigationWrapper = styled.div`
 export const RecommendationCategories = styled.menu`
   display: flex;
   gap: 32px;
+`;
+
+export const Slide = styled(SwiperSlide)`
+  max-width: max-content;
 `;
