@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   NavigationWrapper,
   RecommendationCategories,
@@ -11,9 +11,22 @@ import villa from '../../assets/icons/villa.svg';
 import apartments from '../../assets/icons/apartment.svg';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { CardWrapper, CategoryItem, Container } from '../../common';
+import { CardWrapper, Container } from '../../common';
+import {
+  ItemIcon,
+  ItemStyled,
+} from '../../common/CategoryItem/CategoryItem.styled';
+import { sortedByType } from '../../utils/helpers';
+import { APARTMENT, HOUSE, VILLA } from '../../utils/constants';
 
 export const Recommendation = () => {
+  const [sort, setSort] = useState('house');
+
+  const visibleCategory = sortedByType(sort);
+  const isHouse = sort === HOUSE;
+  const isVilla = sort === VILLA;
+  const isApartment = sort === APARTMENT;
+
   return (
     <Container>
       <RecommendationWrapper>
@@ -21,16 +34,48 @@ export const Recommendation = () => {
         <NavigationWrapper>
           <Subtitle subtitle="Featured House"/>
           <RecommendationCategories>
-            <CategoryItem title="House" icon={house}/>
-            <CategoryItem title="Villa" icon={villa}/>
-            <CategoryItem title="Apartment" icon={apartments}/>
+            <ItemStyled
+              sort={isHouse}
+              onClick={() => setSort(HOUSE)}
+            >
+              <ItemIcon
+                sort={isHouse}
+                src={house}
+                alt={`Category: ${house}`}
+              />
+              House
+            </ItemStyled>
+
+            <ItemStyled
+              sort={isVilla}
+              onClick={() => setSort(VILLA)}
+            >
+              <ItemIcon
+                sort={isVilla}
+                src={villa}
+                alt={`Category: ${villa}`}
+              />
+              Villa
+            </ItemStyled>
+
+            <ItemStyled
+              sort={isApartment}
+              onClick={() => setSort(APARTMENT)}
+            >
+              <ItemIcon
+                sort={isApartment}
+                src={apartments}
+                alt={`Category: ${apartments}`}
+              />
+              Apartment
+            </ItemStyled>
           </RecommendationCategories>
           {/* <ButtonWrapper> */}
           {/*   <RecommendationButton icon={arrowLeft}></RecommendationButton> */}
           {/*   <RecommendationButton icon={arrowRight}></RecommendationButton> */}
           {/* </ButtonWrapper> */}
         </NavigationWrapper>
-        <CardWrapper/>
+        <CardWrapper visibleCategory={visibleCategory}/>
       </RecommendationWrapper>
     </Container>
   );

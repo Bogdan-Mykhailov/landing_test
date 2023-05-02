@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const FooterWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 269px;
+  justify-content: space-between;
   box-sizing: border-box;
 `;
 

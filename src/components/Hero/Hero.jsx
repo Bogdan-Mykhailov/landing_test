@@ -25,16 +25,14 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import point from '../../assets/icons/map_point.svg';
-import { Input } from '../../common/Input';
-import { Button } from '../../common/Button';
 import arrowRight from '../../assets/icons/arrow_right.svg';
 import traveloka from '../../assets/icons/partners/traveloka.svg';
 import ticketCom from '../../assets/icons/partners/ticketCom.svg';
 import airbnb from '../../assets/icons/partners/airbnb.svg';
 import tripadvisor from '../../assets/icons/partners/tripadvisor.svg';
 import { Autoplay } from 'swiper';
-import { Container } from '../../common/Container';
 import { data } from '../../data/heroSliderData';
+import { Button, Container, Input } from '../../common';
 
 export const Hero = () => {
   const partners = [

@@ -21,6 +21,7 @@ export function App() {
       <Recommendation/>
       <Subscribe />
       <Footer/>
+      {/* <ReviewCard /> */}
     </AppWrapper>
   );
 }

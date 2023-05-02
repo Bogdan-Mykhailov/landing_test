@@ -2,12 +2,11 @@ import React from 'react';
 import { Card } from '../Card';
 import { StyledRecommendSwiper, WrapperStyled } from './CardWrapper.styled';
 import { Navigation } from 'swiper';
-import { featuredHouse } from '../../data/recommendationData';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Slide } from '../../components/Recommendation/Recomendations.styled';
 
-export const CardWrapper = () => (
+export const CardWrapper = ({visibleCategory}) => (
   <WrapperStyled>
     <StyledRecommendSwiper
       navigation={true}
@@ -26,7 +25,7 @@ export const CardWrapper = () => (
       // }}
       modules={[Navigation]}
     >
-      {featuredHouse.map(cardData => {
+      {visibleCategory.map(cardData => {
         return (
           <Slide key={cardData.id}>
             <Card cardData={cardData}/>

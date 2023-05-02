@@ -30,8 +30,8 @@ export const GradientHeaderStyled3 = styled.div`
   position: absolute;
   width: 438px;
   height: 494px;
-  left: 1070px;
-  top: 1424px;
+  left: 1534px;
+  top: 1452px;
 
   background: #FF9882;
   opacity: 0.3;
@@ -43,8 +43,8 @@ export const GradientHeaderStyled4 = styled.div`
   position: absolute;
   width: 438px;
   height: 494px;
-  left: 1125px;
-  top: 1540px;
+  left: 1593px;
+  top: 1574px;
 
   background: #FFFA82;
   opacity: 0.3;

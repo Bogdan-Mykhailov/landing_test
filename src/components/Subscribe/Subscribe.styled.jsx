@@ -6,7 +6,11 @@ export const SubscribeWrapper = styled.div`
   width: 100%;
   height: 312px;
   border-radius: 32px;
-  background: linear-gradient( rgba(178,195,247,1) 2%, rgba(180,202,246,1) 3%, rgba(207,216,249,1));
+  background: -webkit-linear-gradient(299deg, rgb(173, 198, 246) 11%, rgb(242, 253, 249) 55%, rgb(232, 234, 247) 90%);
+  background: -o-linear-gradient(299deg, rgb(173, 198, 246) 11%, rgb(242, 253, 249) 55%, rgb(232, 234, 247) 90%);
+  background: -ms-linear-gradient(299deg, rgb(173, 198, 246) 11%, rgb(242, 253, 249) 55%, rgb(232, 234, 247) 90%);
+  background: -moz-linear-gradient(299deg, rgb(173, 198, 246) 11%, rgb(242, 253, 249) 55%, rgb(232, 234, 247) 90%);
+  background: linear-gradient(151deg, rgb(173, 198, 246) 11%, rgb(242, 253, 249) 55%, rgb(232, 234, 247) 90%);
 `;
 
 export const SubscribeLeftContent = styled.div`

@@ -9,12 +9,12 @@ export const WrapperStyled = styled.div`
 
 export const StyledRecommendSwiper = styled(Swiper)`
   user-select: none;
-  padding-top: 120px;
-  margin-top: -122px;
+  //padding-top: 120px;
+  //margin-top: -122px;
 
-  .swiper-pagination {
-    bottom: 0;
-  }
+  //.swiper-pagination {
+  //  bottom: 0;
+  //}
 
   .swiper-pagination-bullet {
     background: #282828;
@@ -28,13 +28,13 @@ export const StyledRecommendSwiper = styled(Swiper)`
     height: 8px;
   }
 
-  .swiper-button-prev {
-    left: 1020px;
-  }
+  //.swiper-button-prev {
+  //  left: 1020px;
+  //}
 
-  .swiper-button-next {
-    left: 1100px;
-  }
+  //.swiper-button-next {
+  //  left: 1100px;
+  //}
 
   .swiper-button-next, .swiper-button-prev{
     width: 60px;
@@ -62,7 +62,6 @@ export const StyledRecommendSwiper = styled(Swiper)`
       font-size: 16px;
       font-weight: 900;
       color: #3C4563;
-
     }
   }
 `;

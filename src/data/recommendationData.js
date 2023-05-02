@@ -7,8 +7,8 @@ import popular from '../assets/icons/popular.svg';
 import man2 from '../assets/images/man2.jpg';
 import man3 from '../assets/images/man3.jpg';
 import girl4 from '../assets/images/girl4.jpg';
-import wallet from '../assets/icons/walet.svg'
-import home from '../assets/icons/newHome.svg'
+import wallet from '../assets/icons/walet.svg';
+import home from '../assets/icons/newHome.svg';
 
 export const featuredHouse = [
   {
@@ -18,6 +18,7 @@ export const featuredHouse = [
       tagTitle: 'Popular',
       tagIcon: popular,
       tagType: 'popular',
+      type: 'house'
     },
     title: 'Roselands House',
     subtitle: '$ 35.000.000',
@@ -35,6 +36,7 @@ export const featuredHouse = [
       tagTitle: 'New house',
       tagIcon: home,
       tagType: 'newHouse',
+      type: 'house'
     },
     title: 'Woodlandside',
     subtitle: '$ 20.000.000',
@@ -52,6 +54,7 @@ export const featuredHouse = [
       tagTitle: 'Best Deals',
       tagIcon: wallet,
       tagType: 'bestDeals',
+      type: 'apartment'
     },
     title: 'The Old Lighthouse',
     subtitle: '$ 44.000.000',
@@ -69,6 +72,7 @@ export const featuredHouse = [
       tagTitle: 'Popular',
       tagIcon: popular,
       tagType: 'popular',
+      type: 'villa'
     },
     title: 'Cosmo\'s House',
     subtitle: '$ 22.000.000',
@@ -86,6 +90,7 @@ export const featuredHouse = [
       tagTitle: 'Popular',
       tagIcon: popular,
       tagType: 'popular',
+      type: 'house'
     },
     title: 'Roselands House',
     subtitle: '$ 35.000.000',
@@ -103,6 +108,7 @@ export const featuredHouse = [
       tagTitle: 'New house',
       tagIcon: home,
       tagType: 'newHouse',
+      type: 'house'
     },
     title: 'Woodlandside',
     subtitle: '$ 20.000.000',
