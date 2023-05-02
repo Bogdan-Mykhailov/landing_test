@@ -2,32 +2,29 @@ import React from 'react';
 import { Card } from '../Card';
 import { StyledRecommendSwiper, WrapperStyled } from './CardWrapper.styled';
 import { Navigation } from 'swiper';
+import { Slide } from '../../components/Recommendation/Recomendations.styled';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Slide } from '../../components/Recommendation/Recomendations.styled';
 
-export const CardWrapper = ({visibleCategory}) => (
+export const CardWrapper = ({swiperRef, visibleCategory}) => (
   <WrapperStyled>
     <StyledRecommendSwiper
-      navigation={true}
+      navigation={{
+        prevEl: '.swiper-prev',
+        nextEl: '.swiper-next',
+        clickable: true,
+      }}
+      onSwiper={(swiper) => (swiperRef.current = swiper)}
       slidesPerView={'auto'}
       spaceBetween={40}
-      // centeredSlides={true}
-      // freeMode={true}
-      // loop={true}
-      // autoplay={{
-      //     delay: 3500,
-      //     disableOnInteraction: false,
-      //     // pauseOnMouseEnter: true
-      // }}
-      // pagination={{
-      //     clickable: true,
-      // }}
+      ref={swiperRef}
       modules={[Navigation]}
     >
       {visibleCategory.map(cardData => {
+        const { id } = cardData;
+
         return (
-          <Slide key={cardData.id}>
+          <Slide key={id}>
             <Card cardData={cardData}/>
           </Slide>
         );

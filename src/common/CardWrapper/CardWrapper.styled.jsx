@@ -65,28 +65,3 @@ export const StyledRecommendSwiper = styled(Swiper)`
     }
   }
 `;
-
-// export const StyledReviewSwaper = styled(Swiper)`
-//   user-select: none;
-//   padding-bottom: 45px;
-//
-//   //margin-left: 48px;
-//   //margin-bottom: 38px;
-//
-//   .swiper-pagination {
-//     bottom: -3px;
-//
-//   }
-//
-//   .swiper-pagination-bullet {
-//     background: #282828;
-//     width: 8px;
-//     height: 8px;
-//   }
-//
-//   .swiper-pagination-bullet-active {
-//     background: #3C4563;
-//     width: 8px;
-//     height: 8px;
-//   }
-// `;

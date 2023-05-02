@@ -7,16 +7,20 @@ export const SectionTitle = styled.h2`
   text-transform: capitalize;
   color: var(--gold);
   position: relative;
-  margin-left: ${({margin}) => margin ? '40px' : '0'};
-  
+  margin-bottom: ${({ center }) => center ? '12px' : '0'};
+
   :before {
     content: '';
     position: absolute;
-    left: -40px;
-    bottom: 50%;
-    transform: translate(0, -50%);
-    width: 32px;
-    height: 1px;
-    background-color: var(--gold);
-  }
+    left: ${({ center }) => center ? '' : '-40px'};
+    top: ${({ center }) => center ? '-8px' : ''};
+    bottom: ${({ center }) => center ? '' : '50%'};
+    right: ${({ center }) => center ? '50%;' : ''};
+    transform: ${({ center }) => center
+          ? 'translate(50%, -50%)'
+          : 'translate(0, -50%)'};
+     width: 32px;
+     height: 1px;
+     background-color: var(--gold);
+   }
 `;

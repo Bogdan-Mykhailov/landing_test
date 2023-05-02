@@ -4,7 +4,7 @@ import {
   Footer,
   Header,
   Hero,
-  Recommendation,
+  Recommendation, Review,
   Subscribe,
 } from './components';
 import React from 'react';
@@ -19,9 +19,9 @@ export function App() {
       <Header/>
       <Hero/>
       <Recommendation/>
+      <Review />
       <Subscribe />
       <Footer/>
-      {/* <ReviewCard /> */}
     </AppWrapper>
   );
 }

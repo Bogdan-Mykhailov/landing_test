@@ -1,11 +1,29 @@
 import styled from 'styled-components';
 
+export const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const CardImage = styled.div`
+  background-image: ${({image}) => image && `url(${image})`};
+  background-position: center;
+  background-size: cover;
+  width: 740px;
+  height: 400px;
+  opacity: 0.7;
+  border-radius: 8px;
+  position: relative;
+`;
+
 export const ReviewCardWrapper = styled.div`
+  position: absolute;
+  bottom: -105px;
   background: var(--white);
   box-shadow: 0 9px 32px rgba(89, 92, 219, 0.05);
   border-radius: 16px;
   padding: 32px;
-  max-width: max-content;
 `;
 
 export const ReviewTitle = styled.h2`
@@ -24,6 +42,7 @@ export const ReviewDesc = styled.p`
   color: #626687;
   opacity: 0.75;
   margin-bottom: 24px;
+  width: 548px;
 `;
 
 export const RatingStyled = styled.div`
@@ -84,5 +103,3 @@ export const Rate = styled.p`
   line-height: 28px;
   color: #3C4563;
 `;
-
-

@@ -1,6 +1,8 @@
 import React from 'react';
 import girl2 from '../../assets/images/girl2.jpg';
 import {
+  CardImage,
+  ContentWrapper,
   Rate,
   Rating,
   RatingIcon,
@@ -16,34 +18,42 @@ import {
 } from './ReviewCard.styled';
 import star from '../../assets/icons/star.svg';
 
-export const ReviewCard = () => {
+export const ReviewCard = ({ card }) => {
+  const {
+    image,
+    title,
+    desc,
+    userImage,
+    userName,
+    position,
+    rating,
+  } = card;
+
   return (
-    <ReviewCardWrapper>
-      <ReviewTitle>Best! I got the house I wanted through Hounter</ReviewTitle>
+    <ContentWrapper>
+      <CardImage image={image}/>
 
-      <ReviewDesc>
-        Through this website I can get a house with the type and specifications
-        I want
-        <br/> very easily, without a complicated process to be able to find
-        information on the
-        <br/> house we want.
-      </ReviewDesc>
+      <ReviewCardWrapper>
+        <ReviewTitle>{title}</ReviewTitle>
 
-      <RatingStyled>
-        <ReviewInfo>
-          <ReviewImage src={girl2} alt="Dianne Russell"/>
+        <ReviewDesc>{desc}</ReviewDesc>
 
-          <ReviewWrapper>
-            <ReviewName>Dianne Russell</ReviewName>
-            <ReviewPosition>Manager Director</ReviewPosition>
-          </ReviewWrapper>
-        </ReviewInfo>
+        <RatingStyled>
+          <ReviewInfo>
+            <ReviewImage src={userImage} alt={userName}/>
 
-        <Rating>
-          <RatingIcon src={star} alt="Rating star"/>
-          <Rate>4.6</Rate>
-        </Rating>
-      </RatingStyled>
-    </ReviewCardWrapper>
+            <ReviewWrapper>
+              <ReviewName>{userName}</ReviewName>
+              <ReviewPosition>{position}</ReviewPosition>
+            </ReviewWrapper>
+          </ReviewInfo>
+
+          <Rating>
+            <RatingIcon src={star} alt="Rating star"/>
+            <Rate>{rating}</Rate>
+          </Rating>
+        </RatingStyled>
+      </ReviewCardWrapper>
+    </ContentWrapper>
   );
 };

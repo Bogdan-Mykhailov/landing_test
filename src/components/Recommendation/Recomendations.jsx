@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import {
   NavigationWrapper,
   RecommendationCategories,
@@ -13,14 +13,31 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { CardWrapper, Container } from '../../common';
 import {
+  ButtonWrapper,
   ItemIcon,
   ItemStyled,
+  RecommendationButton,
 } from '../../common/CategoryItem/CategoryItem.styled';
 import { sortedByType } from '../../utils/helpers';
 import { APARTMENT, HOUSE, VILLA } from '../../utils/constants';
+import arrowLeft from '../../assets/icons/arrow_left.svg';
+import arrowRight from '../../assets/icons/arrow_right.svg';
 
 export const Recommendation = () => {
   const [sort, setSort] = useState('house');
+  const swiperRef = useRef(null);
+
+  const handlePrevSlide = () => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.slidePrev();
+    }
+  };
+
+  const handleNextSlide = () => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.slideNext();
+    }
+  };
 
   const visibleCategory = sortedByType(sort);
   const isHouse = sort === HOUSE;
@@ -31,8 +48,10 @@ export const Recommendation = () => {
     <Container>
       <RecommendationWrapper>
         <Title title="Our Recommendation"/>
+
         <NavigationWrapper>
           <Subtitle subtitle="Featured House"/>
+
           <RecommendationCategories>
             <ItemStyled
               sort={isHouse}
@@ -70,12 +89,15 @@ export const Recommendation = () => {
               Apartment
             </ItemStyled>
           </RecommendationCategories>
-          {/* <ButtonWrapper> */}
-          {/*   <RecommendationButton icon={arrowLeft}></RecommendationButton> */}
-          {/*   <RecommendationButton icon={arrowRight}></RecommendationButton> */}
-          {/* </ButtonWrapper> */}
+
+          <ButtonWrapper>
+            <RecommendationButton icon={arrowLeft} onClick={handlePrevSlide}/>
+
+            <RecommendationButton icon={arrowRight} onClick={handleNextSlide}/>
+          </ButtonWrapper>
         </NavigationWrapper>
-        <CardWrapper visibleCategory={visibleCategory}/>
+
+        <CardWrapper swiperRef={swiperRef} visibleCategory={visibleCategory}/>
       </RecommendationWrapper>
     </Container>
   );
