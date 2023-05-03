@@ -15,7 +15,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 export const Review = () => {
-
   return (
     <Container>
       <Wrapper>
@@ -28,7 +27,6 @@ export const Review = () => {
             spaceBetween={56}
             centeredSlides={true}
             freeMode={true}
-            // loop={true}
             autoplay={{
                 delay: 3000,
                 disableOnInteraction: false,

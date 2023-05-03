@@ -17,7 +17,8 @@ import {
   SliderItem,
   SliderSubTitle,
   SliderTitle,
-  SubTitle, SwiperSlideStyled,
+  SubTitle,
+  SwiperSlideStyled,
   SwiperStyled,
   TitleWrapper,
 } from './Hero.styled';
@@ -26,34 +27,12 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import point from '../../assets/icons/map_point.svg';
 import arrowRight from '../../assets/icons/arrow_right.svg';
-import traveloka from '../../assets/icons/partners/traveloka.svg';
-import ticketCom from '../../assets/icons/partners/ticketCom.svg';
-import airbnb from '../../assets/icons/partners/airbnb.svg';
-import tripadvisor from '../../assets/icons/partners/tripadvisor.svg';
 import { Autoplay } from 'swiper';
 import { data } from '../../data/heroSliderData';
 import { Button, Container, Input } from '../../common';
+import { partners } from '../../data/partnersData';
 
 export const Hero = () => {
-  const partners = [
-    {
-      icon: traveloka,
-      title: 'Traveloka',
-    },
-    {
-      icon: ticketCom,
-      title: 'Ticket.Com',
-    },
-    {
-      icon: airbnb,
-      title: 'Airbnb',
-    },
-    {
-      icon: tripadvisor,
-      title: 'Tripadvisor',
-    },
-  ];
-
   return (
     <Container>
       <HeroStyled>
@@ -73,15 +52,18 @@ export const Hero = () => {
 
           <SearchWrapper>
             <SearchIcon src={point} alt="Map piont"/>
+
             <Input
               type="text"
               placeholder="Search for the location you want!"
             />
+
             <Button title="Search" icon={arrowRight}/>
           </SearchWrapper>
 
           <PartnershipWrapper>
             <PartnershipTitle>Our Partnership</PartnershipTitle>
+
             <PartnershipList>
               {partners.map(({
                 icon,
@@ -99,7 +81,6 @@ export const Hero = () => {
           <SwiperStyled
             slidesPerView="auto"
             spaceBetween={16}
-            // freeMode={true}
             loop={true}
             autoplay={{
               delay: 3000,
@@ -136,6 +117,7 @@ export const Hero = () => {
 
                     <ContentWrapper>
                       <SliderTitle>{title}</SliderTitle>
+
                       <SliderSubTitle>{subTitle}</SliderSubTitle>
                     </ContentWrapper>
                   </SliderItem>
