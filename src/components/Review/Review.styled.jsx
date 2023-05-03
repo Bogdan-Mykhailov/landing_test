@@ -23,7 +23,7 @@ export const StyledReviewSwaper = styled(Swiper)`
   //margin-bottom: 38px;
 
   .swiper-pagination {
-    bottom: -3px;
+    bottom: 0;
   }
 
   .swiper-pagination-bullet {

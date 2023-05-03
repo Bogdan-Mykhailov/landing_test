@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   NavigationWrapper,
   RecommendationCategories,
@@ -24,8 +24,21 @@ import arrowLeft from '../../assets/icons/arrow_left.svg';
 import arrowRight from '../../assets/icons/arrow_right.svg';
 
 export const Recommendation = () => {
-  const [sort, setSort] = useState('house');
+  const [sort, setSort] = useState(HOUSE);
   const swiperRef = useRef(null);
+
+  useEffect(() => {
+    handleSort(sort);
+  }, [sort]);
+
+  const visibleCategory = sortedByType(sort);
+  const isHouse = sort === HOUSE;
+  const isVilla = sort === VILLA;
+  const isApartment = sort === APARTMENT;
+
+  const handleSort = (type) => {
+    setSort(type);
+  };
 
   const handlePrevSlide = () => {
     if (swiperRef.current) {
@@ -38,11 +51,6 @@ export const Recommendation = () => {
       swiperRef.current.swiper.slideNext();
     }
   };
-
-  const visibleCategory = sortedByType(sort);
-  const isHouse = sort === HOUSE;
-  const isVilla = sort === VILLA;
-  const isApartment = sort === APARTMENT;
 
   return (
     <Container>

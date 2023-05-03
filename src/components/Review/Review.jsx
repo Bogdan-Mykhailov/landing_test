@@ -25,15 +25,17 @@ export const Review = () => {
           <StyledReviewSwaper
             slidesPerView={'auto'}
             spaceBetween={56}
+            initialSlide={1}
             centeredSlides={true}
             freeMode={true}
             autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
             }}
             pagination={{
-                clickable: false,
+              clickable: false,
+              dynamicBullets: true,
             }}
             modules={[Autoplay, Pagination]}
           >

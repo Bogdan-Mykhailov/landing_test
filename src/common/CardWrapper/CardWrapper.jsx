@@ -9,11 +9,7 @@ import 'swiper/css/navigation';
 export const CardWrapper = ({swiperRef, visibleCategory}) => (
   <WrapperStyled>
     <StyledRecommendSwiper
-      navigation={{
-        prevEl: '.swiper-prev',
-        nextEl: '.swiper-next',
-        clickable: true,
-      }}
+      navigation={true}
       onSwiper={(swiper) => (swiperRef.current = swiper)}
       slidesPerView={'auto'}
       spaceBetween={40}
