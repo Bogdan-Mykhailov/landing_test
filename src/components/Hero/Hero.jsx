@@ -58,7 +58,7 @@ export const Hero = () => {
               placeholder="Search for the location you want!"
             />
 
-            <Button title="Search" icon={arrowRight}/>
+            <Button iconPosition='after' gap={'gap'} title="Search" icon={arrowRight}/>
           </SearchWrapper>
 
           <PartnershipWrapper>

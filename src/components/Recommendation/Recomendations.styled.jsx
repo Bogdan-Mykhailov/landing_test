@@ -4,8 +4,7 @@ import { SwiperSlide } from 'swiper/react';
 export const RecommendationWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding-left: 120px;
-  margin-left: 40px;
+  padding-left: 160px;
 `;
 
 export const NavigationWrapper = styled.div`

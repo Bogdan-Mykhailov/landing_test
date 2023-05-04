@@ -1,12 +1,12 @@
 import React from 'react';
-import { Title } from '../SectionTitle';
+import { Title } from '../../common/SectionTitle';
 import {
   ReviewContent,
   SlideItem,
   StyledReviewSwaper,
   Wrapper,
 } from './Review.styled';
-import { Subtitle } from '../SectionSubtitle';
+import { Subtitle } from '../../common/SectionSubtitle';
 import { Container } from '../../common';
 import { ReviewCard } from '../../common/ReviewCard';
 import { reviewData } from '../../data/reviewData';

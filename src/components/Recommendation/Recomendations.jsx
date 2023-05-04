@@ -4,14 +4,12 @@ import {
   RecommendationCategories,
   RecommendationWrapper,
 } from './Recomendations.styled';
-import { Title } from '../SectionTitle';
-import { Subtitle } from '../SectionSubtitle';
 import house from '../../assets/icons/house.svg';
 import villa from '../../assets/icons/villa.svg';
 import apartments from '../../assets/icons/apartment.svg';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { CardWrapper, Container } from '../../common';
+import { CardWrapper, Container, Subtitle, Title } from '../../common';
 import {
   ButtonWrapper,
   ItemIcon,
@@ -99,9 +97,15 @@ export const Recommendation = () => {
           </RecommendationCategories>
 
           <ButtonWrapper>
-            <RecommendationButton icon={arrowLeft} onClick={handlePrevSlide}/>
+            <RecommendationButton
+              iconPosition='before'
+              icon={arrowLeft}
+              onClick={handlePrevSlide}/>
 
-            <RecommendationButton icon={arrowRight} onClick={handleNextSlide}/>
+            <RecommendationButton
+              iconPosition='before'
+              icon={arrowRight}
+              onClick={handleNextSlide}/>
           </ButtonWrapper>
         </NavigationWrapper>
 

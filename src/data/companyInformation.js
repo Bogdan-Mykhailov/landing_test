@@ -6,19 +6,19 @@ export const companyLinks = [
       {
         id: 1,
         linkTitle: 'House',
-        address: '/#'
+        address: '#'
       },
 
       {
         id: 2,
         linkTitle: 'Apartment',
-        address: '/#'
+        address: '#'
       },
 
       {
         id: 3,
         linkTitle: 'Villa',
-        address: '/#'
+        address: '#'
       },
     ],
   },
@@ -30,25 +30,25 @@ export const companyLinks = [
       {
         id: 4,
         linkTitle: 'New Article',
-        address: '/#'
+        address: '#'
       },
 
       {
         id: 5,
         linkTitle: 'Popular Article',
-        address: '/#'
+        address: '#'
       },
 
       {
         id: 6,
         linkTitle: 'Most Read',
-        address: '/#'
+        address: '#'
       },
 
       {
         id: 7,
         linkTitle: 'Tips & Tricks',
-        address: '/#'
+        address: '#'
       },
     ],
   },
@@ -60,19 +60,19 @@ export const companyLinks = [
       {
         id: 8,
         linkTitle: '2464 Royal Ln. Mesa, New Jersey 45463',
-        address: '/#'
+        address: '#'
       },
 
       {
         id: 9,
         linkTitle: '(671) 555-0110',
-        address: '/#',
+        address: '#',
       },
 
       {
         id: 10,
         linkTitle: 'info@hounter.com',
-        address: '/#',
+        address: '#',
       },
     ],
   },

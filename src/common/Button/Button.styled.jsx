@@ -12,6 +12,11 @@ export const ButtonStyled = styled.button`
   font-family: Lexend600, sans-serif;
   font-size: 14px;
   line-height: 22px;
-  gap: 4px;
+  gap: ${({ gap }) => gap ? '4px' : '16px'};
   cursor: pointer;
+`;
+
+export const Icon = styled.img`
+  width: 24px;
+  height: 24px;
 `;

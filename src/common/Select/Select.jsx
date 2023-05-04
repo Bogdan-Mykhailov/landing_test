@@ -26,15 +26,15 @@ export const Select = ({title, icon}) => {
       </SelectButton>
       <SelectStyled toggle={toggle}>
         <ItemStyled onClick={handleToggleClick} >
-          <ItemLink href="/">House</ItemLink>
+          <ItemLink href="#">House</ItemLink>
         </ItemStyled>
 
         <ItemStyled onClick={handleToggleClick}>
-          <ItemLink href="/">Villa</ItemLink>
+          <ItemLink href="#">Villa</ItemLink>
         </ItemStyled>
 
         <ItemStyled onClick={handleToggleClick}>
-          <ItemLink href="/">Apartment</ItemLink>
+          <ItemLink href="#">Apartment</ItemLink>
         </ItemStyled>
       </SelectStyled>
     </SelectWrapper>

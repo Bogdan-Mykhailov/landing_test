@@ -3,8 +3,6 @@ export * from './Header';
 export * from './Hero';
 export * from './Recommendation';
 export * from './Review';
-export * from './SectionSubtitle';
-export * from './SectionTitle';
 export * from './Sell';
 export * from './Subscribe';
 export * from './TipsAndTricks';

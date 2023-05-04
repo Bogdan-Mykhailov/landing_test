@@ -1,5 +1,4 @@
 import React from 'react';
-import girl2 from '../../assets/images/girl2.jpg';
 import {
   CardImage,
   ContentWrapper,

@@ -1,9 +1,20 @@
 import React from 'react';
-import {ButtonStyled} from "./Button.styled";
+import { ButtonStyled, Icon } from './Button.styled';
 
-export const Button = ({title, icon}) => (
-    <ButtonStyled>
+export const Button = ({
+  iconPosition,
+  gap,
+  title,
+  icon,
+}) => {
+  const isBefore = iconPosition === 'before';
+  const isAfter = iconPosition === 'after';
+
+  return (
+    <ButtonStyled gap={gap}>
+      {isBefore && icon && <Icon src={icon} alt="Button icon"/>}
       {title}
-      {icon && <img src={icon} alt='Button icon'/>}
+      {isAfter && icon && <Icon src={icon} alt="Button icon"/>}
     </ButtonStyled>
-);
+  );
+};

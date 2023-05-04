@@ -4,12 +4,13 @@ import {
   Footer,
   Header,
   Hero,
-  Recommendation, Review,
+  Recommendation,
+  Review,
+  Sell,
   Subscribe,
 } from './components';
 import React from 'react';
 import { GradientItems } from './common';
-
 
 export function App() {
   return (
@@ -19,8 +20,9 @@ export function App() {
       <Header/>
       <Hero/>
       <Recommendation/>
-      <Review />
-      <Subscribe />
+      <Sell/>
+      <Review/>
+      <Subscribe/>
       <Footer/>
     </AppWrapper>
   );

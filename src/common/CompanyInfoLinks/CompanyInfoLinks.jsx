@@ -19,7 +19,7 @@ export const CompanyInfoLinks = () => (
           <InfoTitle>{title}</InfoTitle>
           {links.map(({id, linkTitle, address}) => (
             <InfoListItem key={id}>
-              <InfoLink href={address} sdf>{linkTitle}</InfoLink>
+              <InfoLink href={address}>{linkTitle}</InfoLink>
             </InfoListItem>
           ))}
         </InfoList>

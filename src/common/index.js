@@ -9,3 +9,5 @@ export * from './Input';
 export * from './MainLogo';
 export * from './Select';
 export * from './Tag';
+export * from './SectionSubtitle';
+export * from './SectionTitle';
