@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 export const SellWrapper = styled.div`
   display: flex;
@@ -111,19 +112,21 @@ export const SellPosition = styled.span`
 export const SellGallery = styled.div`
   width: 528px;
   height: 459px;
-  position: relative;
+`;
+
+export const MainImageWrapper = styled.div`
+  margin-left: 40px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
 `;
 
 export const MainImageCover = styled.div`
-  width: 488px;
-  height: 416px;
   display: flex;
   border-radius: 4px;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  right: 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  object-fit: cover;
+  //background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 `;
 
 export const GalleryButton = styled.button`
@@ -139,7 +142,10 @@ export const GalleryButton = styled.button`
   cursor: pointer;
   transition: linear 1s ease-in-out;
   position: absolute;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 1;
+  align-self: center;
 
   &:hover {
     transform: scale(1.03);
@@ -155,44 +161,11 @@ export const GalleryButtonImg = styled.img`
   height: 21px;
 `;
 
-export const MiddleImage = styled.img`
-  width: 296px;
-  height: 168px;
-  border-radius: 4px;
-  position: absolute;
-  bottom: 0;
-  object-fit: cover;
-  z-index: 1;
-`;
-
-export const SmallImage = styled.img`
-  width: 96px;
-  height: 80px;
-  border-radius: 4px;
-  position: absolute;
-  bottom: 0;
-  left: 308px;
-  object-fit: cover;
-  z-index: 1;
-`;
-
-export const SmallImageLast = styled.img`
-  width: 96px;
-  height: 80px;
-  border-radius: 4px;
-  position: absolute;
-  bottom: 0;
-  object-fit: cover;
-  left: 416px;
-  z-index: 1;
-`;
-
 export const MainImage = styled.img`
-  width: 100%;
-  height: 100%;
+  width: ${({ width }) => width || '488px'};
+  height: ${({ height }) => height || '416px'};
   border-radius: 4px;
   object-fit: cover;
-  z-index: 1;
 
   &::before {
     content: '';
@@ -203,4 +176,52 @@ export const MainImage = styled.img`
     height: 100%;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   }
+`;
+
+export const MidImage = styled.img`
+  object-fit: cover;
+  width: ${({ width }) => width ? '296px' : '96px'};
+  height: ${({ height }) => height ? '168px' : '80px'};
+  border-radius: 4px;
+`;
+
+export const SmallImage = styled.img`
+  display: flex;
+  object-fit: cover;
+  width: ${({ width }) => width ? '296px' : '96px'};
+  height: ${({ height }) => height ? '168px' : '80px'};
+  border-radius: 4px;
+`;
+
+export const SliderStyledMain = styled(Swiper)`
+`;
+
+export const SliderItem = styled(SwiperSlide)``;
+
+export const SliderStyled = styled(Swiper)`
+  border-radius: 4px;
+  position: absolute;
+  bottom: 0;
+  padding: 0;
+  width: 100%;
+`;
+
+export const SliderItemMid = styled(SwiperSlide)`
+  object-fit: cover;
+  border-radius: 4px;
+`;
+export const SliderItemSmallA = styled(SwiperSlide)`
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  margin-left: 54px;
+  margin-top: auto;
+  object-fit: cover;
+  border-radius: 4px;
+`;
+
+export const SliderItemSmallB = styled(SwiperSlide)`
+  margin-top: auto;
+  object-fit: cover;
+  border-radius: 4px;
 `;

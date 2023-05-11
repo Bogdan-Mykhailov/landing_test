@@ -12,7 +12,8 @@ import {
   HouseDetailSpan,
   MainImage,
   MainImageCover,
-  MiddleImage,
+  MainImageWrapper,
+  MidImage,
   SellContent,
   SellGallery,
   SellImage,
@@ -20,8 +21,13 @@ import {
   SellName,
   SellPosition,
   SellWrapper,
+  SliderItem,
+  SliderItemMid,
+  SliderItemSmallA,
+  SliderItemSmallB,
+  SliderStyled,
+  SliderStyledMain,
   SmallImage,
-  SmallImageLast,
   UserInfoWrapper,
 } from './Sell.styled';
 import phone from '../../assets/icons/phone.svg';
@@ -29,14 +35,17 @@ import girl2 from '../../assets/images/girl2.jpg';
 import bed from '../../assets/icons/bed.svg';
 import bath from '../../assets/icons/bath.svg';
 import car from '../../assets/icons/car.svg';
+import play from '../../assets/icons/play.svg';
 import stairs from '../../assets/icons/stairs.svg';
 import { Modal } from '../../common/Modal';
 import { useHandleModal } from '../../hooks/use-modal';
-import play from '../../assets/icons/play.svg';
 import apart7 from '../../assets/images/apart7.jpg';
 import house0 from '../../assets/images/house0.jpg';
 import apart6 from '../../assets/images/apart6.jpg';
 import apart8 from '../../assets/images/apart8.jpg';
+import 'swiper/css';
+import { Autoplay } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 export const Sell = () => {
   const {
@@ -116,28 +125,89 @@ export const Sell = () => {
             )}
           </Modal>
 
-          <MainImageCover>
-            <MainImage onClick={handleModalToggle} src={house0}
-                       alt="Modal img"/>
-            <GalleryButton>
-              <GalleryButtonImg src={play} alt="Play Button"/>
-            </GalleryButton>
-          </MainImageCover>
+          <MainImageWrapper>
+            <Swiper
+              slidesPerView={1}
+              loop={true}
+              initialSlide={0}
+              // autoplay={{
+              //   delay: 3000,
+              //   disableOnInteraction: false,
+              // }}
+              modules={[Autoplay]}
+            >
+              <SwiperSlide>
+                <MainImageCover>
+                  <MainImage
+                    onClick={handleModalToggle}
+                    src={house0}
+                    alt="Modal img"/>
+                  <GalleryButton>
+                    <GalleryButtonImg src={play} alt="Play Button"/>
+                  </GalleryButton>
+                </MainImageCover>
+              </SwiperSlide>
 
-          <MiddleImage
-            src={apart7}
-            onClick={handleModalToggle}
-            alt="Modal img"/>
+              <SwiperSlide>
+                <MainImage
+                  src={apart7}
+                  onClick={handleModalToggle}
+                  alt="Modal img"/>
+              </SwiperSlide>
 
-          <SmallImage
-            src={apart6}
-            onClick={handleModalToggle}
-            alt="Modal img"/>
+              <SwiperSlide>
+                <MainImage
+                  src={apart6}
+                  onClick={handleModalToggle}
+                  alt="Modal img"/>
+              </SwiperSlide>
 
-          <SmallImageLast
-            src={apart8}
-            onClick={handleModalToggle}
-            alt="Modal img"/>
+              <SwiperSlide>
+                <MainImage
+                  src={apart8}
+                  onClick={handleModalToggle}
+                  alt="Modal img"/>
+              </SwiperSlide>
+            </Swiper>
+          </MainImageWrapper>
+
+          <div style={{position: 'relative'}}>
+            <SliderStyled
+              slidesPerView={3}
+              initialSlide={1}
+              spaceBetween={8}
+              loop={true}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay]}
+            >
+              <SliderItemMid>
+                <MidImage
+                  width={'width'}
+                  height={'height'}
+                  src={apart7}
+                  onClick={handleModalToggle}
+                  alt="Modal img"/>
+              </SliderItemMid>
+
+              <SliderItemSmallA>
+                <SmallImage
+                  src={apart6}
+                  onClick={handleModalToggle}
+                  alt="Modal img"/>
+              </SliderItemSmallA>
+
+              <SliderItemSmallB>
+                <SmallImage
+                  src={apart8}
+                  onClick={handleModalToggle}
+                  alt="Modal img"/>
+              </SliderItemSmallB>
+
+            </SliderStyled>
+          </div>
         </SellGallery>
       </SellWrapper>
     </Container>

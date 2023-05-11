@@ -13,7 +13,6 @@ export const CardWrapper = ({swiperRef, visibleCategory}) => (
       onSwiper={(swiper) => (swiperRef.current = swiper)}
       slidesPerView={'auto'}
       spaceBetween={40}
-      ref={swiperRef}
       modules={[Navigation]}
     >
       {visibleCategory.map(cardData => {

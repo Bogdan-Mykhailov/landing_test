@@ -109,10 +109,11 @@ export const SwiperStyled = styled(Swiper)`
   margin-bottom: 48px;
   border-bottom-left-radius: 32px;
   border-top-left-radius: 32px;
+  
   .swiper-pagination {
     bottom: 120px;
   }
-  
+
   .swiper-pagination-bullet {
     background: blueviolet;
     width: 20px;
