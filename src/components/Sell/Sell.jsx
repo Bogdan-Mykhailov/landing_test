@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Button, Container, Subtitle, Title } from '../../common';
 import {
+  BiggestSlierBackground,
+  BiggestSlierImage,
+  BiggestSlierWrapper,
   ContactNowWrapper,
   GalleryButton,
   GalleryButtonImg,
@@ -10,10 +13,8 @@ import {
   HouseDetailList,
   HouseDetailsIcon,
   HouseDetailSpan,
-  MainImage,
-  MainImageCover,
-  MainImageWrapper,
-  MidImage,
+  MiddleSliderWrapper,
+  MiddleSlierImage,
   SellContent,
   SellGallery,
   SellImage,
@@ -21,13 +22,9 @@ import {
   SellName,
   SellPosition,
   SellWrapper,
-  SliderItem,
-  SliderItemMid,
-  SliderItemSmallA,
-  SliderItemSmallB,
-  SliderStyled,
-  SliderStyledMain,
-  SmallImage,
+  SliderGroupWrapper,
+  SmallSliderWrapper,
+  SmallSlierImage,
   UserInfoWrapper,
 } from './Sell.styled';
 import phone from '../../assets/icons/phone.svg';
@@ -37,17 +34,15 @@ import bath from '../../assets/icons/bath.svg';
 import car from '../../assets/icons/car.svg';
 import play from '../../assets/icons/play.svg';
 import stairs from '../../assets/icons/stairs.svg';
-import { Modal } from '../../common/Modal';
-import { useHandleModal } from '../../hooks/use-modal';
-import apart7 from '../../assets/images/apart7.jpg';
-import house0 from '../../assets/images/house0.jpg';
-import apart6 from '../../assets/images/apart6.jpg';
-import apart8 from '../../assets/images/apart8.jpg';
 import 'swiper/css';
 import { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useHandleModal } from '../../hooks/use-modal';
+import { Modal } from '../../common/Modal';
+import { sliderData } from '../../data/slyderData';
 
 export const Sell = () => {
+  const imageRef = useRef(null);
   const {
     modal,
     toggleModal,
@@ -57,6 +52,11 @@ export const Sell = () => {
   const handleModalToggle = (event) => {
     toggleModal();
     setImage(event.currentTarget.src);
+  };
+
+  const handleMainSliderModalToggle = () => {
+    toggleModal();
+    setImage(imageRef.current.src);
   };
 
   return (
@@ -116,98 +116,122 @@ export const Sell = () => {
         </SellContent>
 
         <SellGallery>
-          <Modal modalMode={modal} closeModal={toggleModal}>
-            {image && (
-              <img
-                src={image}
-                alt="Modal img"
-                onClick={handleModalToggle}/>
-            )}
-          </Modal>
 
-          <MainImageWrapper>
+          <Modal modalMode={modal} closeModal={toggleModal}>
+            {image && <img src={image} alt="Modal img"/>}
+          </Modal>
+          <BiggestSlierWrapper>
             <Swiper
               slidesPerView={1}
               loop={true}
               initialSlide={0}
-              // autoplay={{
-              //   delay: 3000,
-              //   disableOnInteraction: false,
-              // }}
-              modules={[Autoplay]}
-            >
-              <SwiperSlide>
-                <MainImageCover>
-                  <MainImage
-                    onClick={handleModalToggle}
-                    src={house0}
-                    alt="Modal img"/>
-                  <GalleryButton>
-                    <GalleryButtonImg src={play} alt="Play Button"/>
-                  </GalleryButton>
-                </MainImageCover>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <MainImage
-                  src={apart7}
-                  onClick={handleModalToggle}
-                  alt="Modal img"/>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <MainImage
-                  src={apart6}
-                  onClick={handleModalToggle}
-                  alt="Modal img"/>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <MainImage
-                  src={apart8}
-                  onClick={handleModalToggle}
-                  alt="Modal img"/>
-              </SwiperSlide>
-            </Swiper>
-          </MainImageWrapper>
-
-          <div style={{position: 'relative'}}>
-            <SliderStyled
-              slidesPerView={3}
-              initialSlide={1}
-              spaceBetween={8}
-              loop={true}
               autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
+                delay: 4000,
               }}
-              modules={[Autoplay]}
-            >
-              <SliderItemMid>
-                <MidImage
-                  width={'width'}
-                  height={'height'}
-                  src={apart7}
-                  onClick={handleModalToggle}
-                  alt="Modal img"/>
-              </SliderItemMid>
+              modules={[Autoplay]}>
+              <BiggestSlierBackground onClick={handleMainSliderModalToggle}>
+                <GalleryButton>
+                  <GalleryButtonImg src={play} alt="Play icon"/>
+                </GalleryButton>
+              </BiggestSlierBackground>
 
-              <SliderItemSmallA>
-                <SmallImage
-                  src={apart6}
-                  onClick={handleModalToggle}
-                  alt="Modal img"/>
-              </SliderItemSmallA>
+              {sliderData.map(({
+                id,
+                image,
+                alt,
+              }) => (
+                <SwiperSlide
+                  key={id}
+                >
+                  <BiggestSlierImage
+                    ref={imageRef}
+                    onClick={handleModalToggle}
+                    src={image}
+                    alt={alt}
+                  />
+                </SwiperSlide>))}
+            </Swiper>
+          </BiggestSlierWrapper>
 
-              <SliderItemSmallB>
-                <SmallImage
-                  src={apart8}
-                  onClick={handleModalToggle}
-                  alt="Modal img"/>
-              </SliderItemSmallB>
+          <SliderGroupWrapper>
+            <MiddleSliderWrapper>
+              <Swiper
+                slidesPerView={1}
+                loop={true}
+                initialSlide={1}
+                autoplay={{
+                  delay: 4000,
+                }}
+                modules={[Autoplay]}>
+                {sliderData.map(({
+                  id,
+                  image,
+                  alt,
+                }) => (
+                  <SwiperSlide
+                    key={id}
+                  >
+                    <MiddleSlierImage
+                      onClick={handleModalToggle}
+                      src={image}
+                      alt={alt}
+                    />
+                  </SwiperSlide>))}
+              </Swiper>
+            </MiddleSliderWrapper>
+            <SmallSliderWrapper>
+              <Swiper
+                slidesPerView={1}
+                loop={true}
+                initialSlide={2}
+                autoplay={{
+                  delay: 4000,
+                }}
+                modules={[Autoplay]}
+              >
+                {sliderData.map(({
+                  id,
+                  image,
+                  alt,
+                }) => (
+                  <SwiperSlide
+                    key={id}
+                  >
+                    <SmallSlierImage
+                      onClick={handleModalToggle}
+                      src={image}
+                      alt={alt}
+                    />
+                  </SwiperSlide>))}
+              </Swiper>
+            </SmallSliderWrapper>
 
-            </SliderStyled>
-          </div>
+            <SmallSliderWrapper>
+              <Swiper
+                slidesPerView={1}
+                loop={true}
+                initialSlide={3}
+                autoplay={{
+                  delay: 4000,
+                }}
+                modules={[Autoplay]}>
+                {sliderData.map(({
+                  id,
+                  image,
+                  alt,
+                }) => (
+                  <SwiperSlide
+                    key={id}
+                  >
+                    <SmallSlierImage
+                      onClick={handleModalToggle}
+                      src={image}
+                      alt={alt}
+                    />
+                  </SwiperSlide>))}
+              </Swiper>
+            </SmallSliderWrapper>
+          </SliderGroupWrapper>
         </SellGallery>
       </SellWrapper>
     </Container>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   NavigationWrapper,
   RecommendationCategories,
@@ -15,15 +15,19 @@ import {
   ItemIcon,
   ItemStyled,
   RecommendationButton,
+  RecommendationIcon,
 } from '../../common/CategoryItem/CategoryItem.styled';
 import { sortedByType } from '../../utils/helpers';
 import { APARTMENT, HOUSE, VILLA } from '../../utils/constants';
 import arrowLeft from '../../assets/icons/arrow_left.svg';
+import arrowLeftDark from '../../assets/icons/arrow_left_dark.svg';
 import arrowRight from '../../assets/icons/arrow_right.svg';
+import arrowRightDark from '../../assets/icons/arrow_right_dark.svg';
 
 export const Recommendation = () => {
   const [sort, setSort] = useState(HOUSE);
-  const swiperRef = useRef(null);
+  const [isStart, setIsStart] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
 
   useEffect(() => {
     handleSort(sort);
@@ -38,17 +42,26 @@ export const Recommendation = () => {
     setSort(type);
   };
 
-  const handlePrevSlide = () => {
-    if (swiperRef.current) {
-      swiperRef.current.swiper.slidePrev();
+  const handleReachEnd = () => {
+    setIsEnd(true);
+  };
+
+  const handleReachStart = () => {
+    setIsStart(true);
+  };
+
+  const handleSlidesChange = () => {
+    if (isStart) {
+      setIsStart(false);
+    }
+
+    if (isEnd) {
+      setIsEnd(false);
     }
   };
 
-  const handleNextSlide = () => {
-    if (swiperRef.current) {
-      swiperRef.current.swiper.slideNext();
-    }
-  };
+  const isCorrectArrowLeft = isStart ? arrowLeftDark : arrowLeft;
+  const isCorrectArrowRight = isEnd ? arrowRightDark :  arrowRight;
 
   return (
     <Container>
@@ -95,21 +108,31 @@ export const Recommendation = () => {
               Apartment
             </ItemStyled>
           </RecommendationCategories>
-
           <ButtonWrapper>
-            <RecommendationButton
-              iconPosition='before'
-              icon={arrowLeft}
-              onClick={handlePrevSlide}/>
+            <RecommendationButton isStart={isStart} className="prev prev-disabled">
+              <RecommendationIcon
+                src={isCorrectArrowLeft}
+                alt="Arrow left"
+                aria-disabled={isStart}
+              />
+            </RecommendationButton>
 
-            <RecommendationButton
-              iconPosition='before'
-              icon={arrowRight}
-              onClick={handleNextSlide}/>
+            <RecommendationButton isEnd={isEnd} className="next next-disabled">
+              <RecommendationIcon
+                src={isCorrectArrowRight}
+                alt="Arrow right"
+                aria-disabled={isEnd}
+              />
+            </RecommendationButton>
           </ButtonWrapper>
         </NavigationWrapper>
 
-        <CardWrapper swiperRef={swiperRef} visibleCategory={visibleCategory}/>
+        <CardWrapper
+          handleReachEnd={handleReachEnd}
+          handleReachStart={handleReachStart}
+          handleSlidesChange={handleSlidesChange}
+          visibleCategory={visibleCategory}
+        />
       </RecommendationWrapper>
     </Container>
   );

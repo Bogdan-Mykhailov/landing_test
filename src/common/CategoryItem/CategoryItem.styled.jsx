@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Button } from '../Button';
 
 export const ItemStyled = styled.li`
   box-sizing: border-box;
@@ -28,11 +27,38 @@ export const ItemIcon = styled.img`
 export const ButtonWrapper = styled.div`
   display: flex;
   gap: 16px;
+
 `;
 
-export const RecommendationButton = styled(Button)`
-  cursor: pointer;
-  filter: brightness(0) saturate(100%) invert(97%) sepia(3%) saturate(1393%) hue-rotate(185deg) brightness(95%) contrast(94%);
+export const RecommendationButton = styled.button`
+  &.next, &.prev {
+    border-radius: 32px;
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: var(--green);
+    border: none;
+    color: var(--white);
+    font-family: Lexend600, sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    gap: ${({ gap }) => gap ? '4px' : '16px'};
+    cursor: pointer;
+  }
+
+  &.prev-disabled {
+    background-color: ${({ isStart }) => isStart && '#E0E3EB'};
+  }
+  
+  &.next-disabled {
+    background-color: ${({ isEnd }) => isEnd && '#E0E3EB'};
+  }
+`;
+
+export const RecommendationIcon = styled.img`
+  width: 28px;
+  height: 28px;
 `;
 
 
