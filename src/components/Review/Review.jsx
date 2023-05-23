@@ -1,13 +1,13 @@
 import React from 'react';
-import { Title } from '../../common/SectionTitle';
+
 import {
   ReviewContent,
   SlideItem,
   StyledReviewSwaper,
   Wrapper,
 } from './Review.styled';
-import { Subtitle } from '../../common/SectionSubtitle';
-import { Container } from '../../common';
+
+import { Container, Subtitle, Title } from '../../common';
 import { ReviewCard } from '../../common/ReviewCard';
 import { reviewData } from '../../data/reviewData';
 import { Autoplay, Pagination } from 'swiper';

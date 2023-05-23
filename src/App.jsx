@@ -7,7 +7,7 @@ import {
   Recommendation,
   Review,
   Subscribe,
-  Sell,
+  Sell, TipsAndTricks,
 } from './components';
 import React from 'react';
 import { GradientItems } from './common';
@@ -22,9 +22,9 @@ export function App() {
       <Recommendation/>
       <Sell/>
       <Review/>
+      <TipsAndTricks />
       <Subscribe/>
       <Footer/>
-      {/* <SliderThumbs/> */}
     </AppWrapper>
   );
 }

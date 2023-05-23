@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container } from '../../common/Container';
 import {
   EmailIcon,
   Feedback,
@@ -26,7 +25,7 @@ import apart1 from '../../assets/images/apart1.jpg';
 import apart2 from '../../assets/images/apart2.jpg';
 import apart3 from '../../assets/images/apart3.jpg';
 import apart4 from '../../assets/images/apart4.jpg';
-import { Button, Input } from '../../common';
+import { Button, Container, Input } from '../../common';
 
 export const Subscribe = () => {
   return (
