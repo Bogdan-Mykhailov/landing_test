@@ -1,3 +1,4 @@
+export * from './Article';
 export * from './Button';
 export * from './Card';
 export * from './CardWrapper';
@@ -7,7 +8,10 @@ export * from './Container';
 export * from './GradientItems';
 export * from './Input';
 export * from './MainLogo';
-export * from './Select';
-export * from './Tag';
+export * from './Modal';
+export * from './RecommendationSlider';
+export * from './ReviewCard';
 export * from './SectionSubtitle';
 export * from './SectionTitle';
+export * from './Select';
+export * from './Tag';

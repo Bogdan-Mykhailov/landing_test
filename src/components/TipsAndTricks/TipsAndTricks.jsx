@@ -1,27 +1,32 @@
 import React from 'react';
-import { Button, Container, Subtitle, Title } from '../../common';
+import { ArticleItem, Button, Container, Subtitle, Title } from '../../common';
 import { Wrapper } from '../Review/Review.styled';
-import apart from '../../assets/images/apart5.jpg'
-import house5 from '../../assets/images/house5.jpg'
-import house7 from '../../assets/images/house7.jpg'
-import villa from '../../assets/images/villa.jpg'
-import clock from '../../assets/icons/clock.svg'
-import russel from '../../assets/images/girl2.jpg'
-import henry from '../../assets/images/man4.jpg'
-import rob from '../../assets/images/man7.jpg'
-import will from '../../assets/images/man6.jpg'
-
-import './TipsAndTricks.styled';
 import {
   ArticleDesc,
-  ArticleIcon, ArticleInfoDesc, ArticleParagraph, ArticleRightTitle,
-  AuthorArticleWrap, AuthorImg, AuthorName,
-  RightSideArticleImg, SubtitleWrap,
+  ArticleIcon,
+  ArticleInfoDesc,
+  ArticleParagraph,
+  ArticleRightTitle,
+  AuthorArticleWrap,
+  AuthorImg,
+  AuthorName,
+  RightSideArticleImg,
+  SubtitleWrap,
   TipsAndTricksContent,
   TipsAndTricksLeftSide,
   TipsAndTricksRightSide,
 } from './TipsAndTricks.styled';
-import { ArticleItem } from '../../common/Article';
+import apart from '../../assets/images/apart5.jpg';
+import house5 from '../../assets/images/house5.jpg';
+import house7 from '../../assets/images/house7.jpg';
+import villa from '../../assets/images/villa.jpg';
+import clock from '../../assets/icons/clock.svg';
+import russel from '../../assets/images/girl2.jpg';
+import henry from '../../assets/images/man4.jpg';
+import rob from '../../assets/images/man7.jpg';
+import will from '../../assets/images/man6.jpg';
+
+import './TipsAndTricks.styled';
 
 export const TipsAndTricks = () => {
   const subtitle = 'Find out more about selling and buying homes';
@@ -30,7 +35,7 @@ export const TipsAndTricks = () => {
     <Container padding>
       <Wrapper>
         <Title
-          center="center"
+          center
           title="See tips and trick from our partnership"
         />
         <SubtitleWrap>
@@ -80,8 +85,10 @@ export const TipsAndTricks = () => {
 
           <TipsAndTricksRightSide>
             <RightSideArticleImg src={villa} alt="Villa"/>
+
             <AuthorArticleWrap>
               <AuthorImg src={will} alt="Man with glasses"/>
+
               <AuthorName>Cameron Williamson</AuthorName>
             </AuthorArticleWrap>
 
@@ -95,11 +102,11 @@ export const TipsAndTricks = () => {
 
             <ArticleInfoDesc>
               <ArticleIcon src={clock} alt="Clock icon"/>
+
               <ArticleDesc>8 min read | 25 Apr 2021</ArticleDesc>
             </ArticleInfoDesc>
           </TipsAndTricksRightSide>
         </TipsAndTricksContent>
-
       </Wrapper>
    </Container>
   );

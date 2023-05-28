@@ -7,8 +7,7 @@ import {
   Wrapper,
 } from './Review.styled';
 
-import { Container, Subtitle, Title } from '../../common';
-import { ReviewCard } from '../../common/ReviewCard';
+import { Container, ReviewCard, Subtitle, Title } from '../../common';
 import { reviewData } from '../../data/reviewData';
 import { Autoplay, Pagination } from 'swiper';
 import 'swiper/css';
@@ -23,6 +22,7 @@ export const Review = () => {
 
         <ReviewContent>
           <StyledReviewSwaper
+            style={{zIndex: 0}}
             slidesPerView={'auto'}
             spaceBetween={56}
             initialSlide={1}

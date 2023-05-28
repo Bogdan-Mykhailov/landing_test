@@ -1,11 +1,11 @@
 const size = {
   m: '480px',
-  t: '768px',
-  d: '1350px',
+  t: '600px',
+  d: '992px',
 }
 
 export const devices = {
-  mob: `(min-width: ${size.s})`,
+  mob: `(min-width: ${size.m})`,
   tab: `(min-width: ${size.t})`,
   desk: `(min-width: ${size.d})`,
 }

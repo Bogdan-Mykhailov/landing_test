@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Button, Container, Subtitle, Title } from '../../common';
+import { Button, Container, Modal, Subtitle, Title } from '../../common';
 import {
   BiggestSlierBackground,
   BiggestSlierImage,
@@ -38,7 +38,6 @@ import 'swiper/css';
 import { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useHandleModal } from '../../hooks/use-modal';
-import { Modal } from '../../common/Modal';
 import { sliderData } from '../../data/slyderData';
 
 export const Sell = () => {
@@ -122,6 +121,7 @@ export const Sell = () => {
           </Modal>
           <BiggestSlierWrapper>
             <Swiper
+              style={{zIndex: 0}}
               slidesPerView={1}
               loop={true}
               initialSlide={0}
@@ -156,6 +156,7 @@ export const Sell = () => {
           <SliderGroupWrapper>
             <MiddleSliderWrapper>
               <Swiper
+                style={{zIndex: 0}}
                 slidesPerView={1}
                 loop={true}
                 initialSlide={1}
@@ -181,6 +182,7 @@ export const Sell = () => {
             </MiddleSliderWrapper>
             <SmallSliderWrapper>
               <Swiper
+                style={{zIndex: 0}}
                 slidesPerView={1}
                 loop={true}
                 initialSlide={2}
@@ -208,6 +210,7 @@ export const Sell = () => {
 
             <SmallSliderWrapper>
               <Swiper
+                style={{zIndex: 0}}
                 slidesPerView={1}
                 loop={true}
                 initialSlide={3}

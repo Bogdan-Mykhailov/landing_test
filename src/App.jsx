@@ -7,7 +7,8 @@ import {
   Recommendation,
   Review,
   Subscribe,
-  Sell, TipsAndTricks,
+  Sell,
+  TipsAndTricks,
 } from './components';
 import React from 'react';
 import { GradientItems } from './common';

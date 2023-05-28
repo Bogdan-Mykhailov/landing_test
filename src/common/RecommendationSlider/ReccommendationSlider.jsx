@@ -25,6 +25,7 @@ export const RecommendationSlider = ({
 
   return (
     <Swiper
+      style={{zIndex: 0}}
       ref={swiperRef}
       slidesPerView="auto"
       spaceBetween={40}

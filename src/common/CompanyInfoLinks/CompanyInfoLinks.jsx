@@ -3,7 +3,8 @@ import {
   InfoLink,
   InfoList,
   InfoListItem,
-  InfoTitle, InfoWrapper,
+  InfoTitle,
+  InfoWrapper,
 } from './CompanyInfoLinks.styled';
 import { companyLinks } from '../../data/companyInformation';
 

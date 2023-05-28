@@ -18,7 +18,7 @@ export const TitleWrapper = styled.div`
 
 export const MainTitle = styled.h1`
   position: relative;
-  z-index: 2;
+  //z-index: 2;
   font-family: Lexend900, sans-serif;
   font-size: 40px;
   line-height: 50px;
@@ -95,16 +95,20 @@ export const RightSide = styled.div`
   align-items: flex-end;
   width: 720px;
   height: 720px;
-  background-color: gray;
-  background-image: linear-gradient(16.74deg, #0C1537 -6.09%, rgba(12, 21, 55, 0) 32.63%),
-  ${`url(${mainLogo})`};
+  
   background-size: cover;
   background-position: center;
   border-bottom-left-radius: 80px;
   overflow-x: hidden;
+  
+  @media (min-width: 1200px) {
+    background-image: linear-gradient(16.74deg, #0C1537 -6.09%, rgba(12, 21, 55, 0) 32.63%),
+    ${`url(${mainLogo})`};
+  }
 `;
 
 export const SwiperStyled = styled(Swiper)`
+  z-index: 0;
   margin-left: 48px;
   margin-bottom: 48px;
   border-bottom-left-radius: 32px;
