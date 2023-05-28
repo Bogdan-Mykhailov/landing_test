@@ -21,11 +21,11 @@ export function App() {
       <Header/>
       <Hero/>
       <Recommendation/>
-      <Sell/>
-      <Review/>
-      <TipsAndTricks />
-      <Subscribe/>
-      <Footer/>
+      {/* <Sell/> */}
+      {/* <Review/> */}
+      {/* <TipsAndTricks /> */}
+      {/* <Subscribe/> */}
+      {/* <Footer/> */}
     </AppWrapper>
   );
 }

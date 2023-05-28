@@ -23,6 +23,7 @@ export const HeaderWrapper = styled.header`
 
   @media ${devices.desk} {
     max-width: 1200px;
+    padding: 0 120px;
   }
 `;
 export const NawWrapper = styled.div`

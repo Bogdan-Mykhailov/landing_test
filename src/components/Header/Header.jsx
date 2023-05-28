@@ -8,7 +8,6 @@ import {
   NawWrapper,
 } from './Header.styled';
 import arrowDown from '../../assets/icons/arrow_down.svg';
-import arrowDownGreen from '../../assets/icons/arrow_down_green.svg';
 import burger from '../../assets/icons/burger_menu.svg';
 import { MainLogo } from '../../common/MainLogo/MainLogo';
 import { Select } from '../../common';
@@ -29,18 +28,18 @@ export const Header = () => {
         isOpen={isOpen}
         handleBurgerOpen={handleBurgerOpen}
       />
-         <NawWrapper>
-           <NavMenu>
-             <MenuItem>About Us</MenuItem>
-             <MenuItem>Article</MenuItem>
-             <Select
-               title='Property'
-               icon={arrowDown}
-             />
-           </NavMenu>
+      <NawWrapper>
+        <NavMenu>
+          <MenuItem>About Us</MenuItem>
+          <MenuItem>Article</MenuItem>
+          <Select
+            title="Property"
+            icon={arrowDown}
+          />
+        </NavMenu>
 
-           <MenuButton>Sign Up!</MenuButton>
-         </NawWrapper>
+        <MenuButton>Sign Up!</MenuButton>
+      </NawWrapper>
       <BurgerImage
         src={burger}
         onClick={handleBurgerOpen}
