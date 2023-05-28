@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { devices } from '../../common-styles/MediaQueries';
 
 export const LogoWrapper = styled.div`
   display: flex;
@@ -7,9 +8,21 @@ export const LogoWrapper = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 36px;
-  height: 36px;
-  margin-right: 12px;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+
+  @media ${devices.tab} {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+  }
+  
+  @media ${devices.desk} {
+    width: 36px;
+    height: 36px;
+    margin-right: 12px;
+  }
 `;
 
 export const LogoTitle = styled.p`

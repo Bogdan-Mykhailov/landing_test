@@ -45,11 +45,11 @@ export const MenuItem = styled.li`
   align-items: center;
   justify-content: center;
   padding: 8px 16px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgb(209, 250, 229);
+  background-color: var(--green);
+  border: 1px solid var(--green);
   border-radius: 32px;
   font-size: 14px;
-  color: var(--greenDark);
+  color: var(--white);
   line-height: 18px;
   font-family: Lexend600, sans-serif;
   cursor: pointer;
@@ -65,10 +65,11 @@ export const MenuItem = styled.li`
 
 
   :hover {
-    background: rgb(209, 250, 229);
+    border: 1px solid var(--greenDark);
 
     @media (min-width: 1200px) {
-      background: rgba(255, 255, 255, 0.1);    }
+      background: rgba(255, 255, 255, 0.1);
+    }
   }
 `;
 
@@ -76,12 +77,22 @@ export const MenuButton = styled.button`
   font-size: 14px;
   line-height: 22px;
   font-family: Lexend600, sans-serif;
-  color: var(--greenDark);
+  color: var(--white);
+  background: var(--greenDark);
   padding: 12px 24px;
-  background: #D1FAE5;
   border-radius: 32px;
   border: none;
   cursor: pointer;
+
+  @media (min-width: 1200px) {
+    color: var(--greenDark);
+    background: #D1FAE5;
+  }
+
+  :hover {
+    transform: scale(0.99);
+    transition: 0.3s;
+  }
 `;
 
 export const BurgerImage = styled.img`
