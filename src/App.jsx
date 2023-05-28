@@ -21,7 +21,7 @@ export function App() {
       <Header/>
       <Hero/>
       <Recommendation/>
-      {/* <Sell/> */}
+      <Sell/>
       {/* <Review/> */}
       {/* <TipsAndTricks /> */}
       {/* <Subscribe/> */}

@@ -141,9 +141,14 @@ export const SearchWrapper = styled.div`
 `;
 
 export const SearchIcon = styled.img`
-  margin-left: 18px;
+  margin-left: 8px;
   width: 20px;
   height: 20px;
+
+  @media ${devices.tab} {
+    margin-left: 18px;
+
+  }
 
   @media ${devices.desk} {
     margin-left: 0;

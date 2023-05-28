@@ -1,9 +1,20 @@
 import styled from 'styled-components';
+import { devices } from '../../common-styles/MediaQueries';
 
 export const SellWrapper = styled.div`
   display: flex;
-  padding: 0 120px 0 160px;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+
+  @media ${devices.desk} {
+    padding: 0 120px 0 160px;
+    justify-content: space-between;
+  }
+  
+  @media (min-width: 1295px) {
+    flex-direction: row;
+  }
 `;
 
 export const SellContent = styled.div`
@@ -75,9 +86,15 @@ export const SellInfo = styled.div`
 
 export const ContactNowWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  max-width: 440px;
+  
+
+  @media ${devices.desk} {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 440px;
+  }
 `;
 
 export const SellImage = styled.img`
@@ -85,6 +102,11 @@ export const SellImage = styled.img`
   width: 56px;
   height: 56px;
   border-radius: 50%;
+  margin-bottom: 20px;
+  
+  @media ${devices.desk} {
+    margin-bottom: 0;
+  }
 `;
 
 export const UserInfoWrapper = styled.div`
@@ -109,76 +131,116 @@ export const SellPosition = styled.span`
 `;
 
 export const SellGallery = styled.div`
+  margin-top: 30px;
   position: relative;
-  width: 528px;
-  height: 459px;
+
+  @media ${devices.desk} {
+    width: 528px;
+    height: 459px;
+  }
 `;
 
 export const BiggestSlierBackground = styled.div`
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: none;
+  
+  @media ${devices.desk} {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const GalleryButton = styled.button`
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(2.5px);
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: linear 1s ease-in-out;
-  z-index: 10;
+  display: none;
+  
+  @media ${devices.desk} {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2.5px);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: linear 1s ease-in-out;
+    z-index: 10;
 
-  &:hover {
-    background-color: rgba(128, 128, 128, 0.62);
-  }
+    &:hover {
+      background-color: rgba(128, 128, 128, 0.62);
+    }
 
-  &:active {
-    background-color: rgba(128, 128, 128, 0.87);
+    &:active {
+      background-color: rgba(128, 128, 128, 0.87);
+    }
   }
 `;
 
 export const GalleryButtonImg = styled.img`
-  width: 15px;
-  height: 21px;
+  display: none;
+
+  @media ${devices.desk} {
+    display: block;
+    width: 15px;
+    height: 21px;
+  }
 `;
 
 export const BiggestSlierWrapper = styled.div`
-  position: absolute;
-  width: 488px;
-  height: 416px;
-  right: 0;
-  top: 0;
+  width: 300px;
+  height: 250px;
+
+  @media ${devices.tab} {
+    width: 450px;
+  }
+  
+  @media ${devices.desk} {
+    position: absolute;
+    width: 488px;
+    height: 416px;
+    right: 0;
+    top: 0;
+  }
 `;
 
 export const BiggestSlierImage = styled.img`
   width: 100%;
-  height: 416px;
+  height: 250px;
   object-fit: cover;
   border-radius: 4px;
+
+  @media ${devices.tab} {
+    width: 450px;
+    height: 300px;
+  }
+  
+  @media ${devices.desk} {
+    width: 100%;
+    height: 416px;
+  }
 `;
 
 export const SliderGroupWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 168px;
-  width: 100%;
+  display: none;
+  
+  @media ${devices.desk} {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 168px;
+    width: 100%;
+  }
 `;
 
 export const MiddleSliderWrapper = styled.div`
