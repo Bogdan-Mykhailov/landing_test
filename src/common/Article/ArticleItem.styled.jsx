@@ -1,10 +1,26 @@
 import styled from 'styled-components';
+import { devices } from '../../common-styles/MediaQueries';
 
 export const Article = styled.div`
   display: flex;
   justify-content: space-between;
-  &:not(:last-child) {
-    margin-bottom: 42px;
+  flex-direction: column;
+  width: 280px;
+  margin-bottom: 20px;
+
+  @media ${devices.tab} {
+    
+    flex-direction: row;
+    width: max-content;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media ${devices.desk} {
+    &:not(:last-child) {
+      margin-bottom: 42px;
+    }
   }
 `;
 
@@ -14,12 +30,25 @@ export const ArticleImage = styled.img`
   border-radius: 16px;
   margin-right: 32px;
   object-fit: cover;
+  margin-bottom: 14px;
+
+  @media ${devices.tab} {
+    margin-bottom: 0;
+  }
+
+  @media ${devices.desk} {
+    margin-bottom: 0;
+  }
 `;
 
 export const ArticleDesc = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 340px;
+  width: 280px;
+  
+  @media ${devices.tab} {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+  }
 `;
 
 export const ArticleAuthor = styled.div`

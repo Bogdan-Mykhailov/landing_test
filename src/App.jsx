@@ -23,7 +23,7 @@ export function App() {
       <Recommendation/>
       <Sell/>
       <Review/>
-      {/* <TipsAndTricks /> */}
+      <TipsAndTricks />
       {/* <Subscribe/> */}
       {/* <Footer/> */}
     </AppWrapper>
