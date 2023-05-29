@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { devices } from '../../common-styles/MediaQueries';
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -7,23 +8,41 @@ export const ContentWrapper = styled.div`
 `;
 
 export const CardImage = styled.div`
-  background-image: ${({image}) => image && `url(${image})`};
+  background-image: ${({ image }) => image && `url()`};
   background-position: center;
   background-size: cover;
-  width: 740px;
-  height: 400px;
-  opacity: 0.7;
   border-radius: 8px;
+  width: 280px;
+  height: 240px;
   position: relative;
+  opacity: 0.7;
+  
+  @media ${devices.desk} {
+    background-image: ${({ image }) => image && `url(${image})`};
+    width: 740px;
+    height: 400px;
+  }
 `;
 
 export const ReviewCardWrapper = styled.div`
   position: absolute;
-  bottom: -105px;
+  bottom: 0;
   background: var(--white);
   box-shadow: 0 9px 32px rgba(89, 92, 219, 0.05);
   border-radius: 16px;
-  padding: 32px;
+  width: 280px;
+  padding: 0 10px;
+
+  @media ${devices.tab} {
+    width: 480px;
+    padding: 0 24px;
+  }
+
+  @media ${devices.desk} {
+    width: max-content;
+    bottom: -105px;
+    padding: 32px;
+  }
 `;
 
 export const ReviewTitle = styled.h2`
@@ -42,7 +61,15 @@ export const ReviewDesc = styled.p`
   color: #626687;
   opacity: 0.75;
   margin-bottom: 24px;
-  width: 548px;
+  width: 280px;
+
+  @media ${devices.tab} {
+    width: 480px;
+  }
+  
+  @media ${devices.desk} {
+    width: 548px;
+  }
 `;
 
 export const RatingStyled = styled.div`

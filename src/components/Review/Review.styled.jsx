@@ -1,10 +1,20 @@
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { devices } from '../../common-styles/MediaQueries';
 
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 0 20px;
+
+  @media ${devices.tab} {
+    padding: 50px 40px;
+  }
+
+  @media ${devices.desk} {
+    padding: 0;
+  }
 `;
 
 export const ReviewContent = styled.div`
@@ -15,36 +25,58 @@ export const ReviewContent = styled.div`
 `;
 
 export const StyledReviewSwaper = styled(Swiper)`
-  user-select: none;
-  padding-bottom: 150px;
-  
-
-  //margin-left: 48px;
-  //margin-bottom: 38px;
+  width: 280px;
+  height: 300px;
 
   .swiper-pagination {
-    bottom: 0;
+    display: none;
+  }
+  
+  @media ${devices.tab} {
+    height: auto;
+    width: 480px;
   }
 
-  .swiper-pagination-bullet {
-    background: #282828;
-    width: 8px;
-    height: 8px;
-    :not(:last-child) {
-       margin-right: 10px;
-     }
-  }
+  @media ${devices.desk} {
+    width: max-content;
+    user-select: none;
+    padding-bottom: 150px;
 
-  .swiper-pagination-bullet-active {
-    background: #3C4563;
-    width: 8px;
-    height: 8px;
-    :not(:last-child) {
-      margin-right: 10px;
+    .swiper-pagination {
+      display: block;
+      bottom: 0;
+    }
+
+    .swiper-pagination-bullet {
+      background: #282828;
+      width: 8px;
+      height: 8px;
+
+      :not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #3C4563;
+      width: 8px;
+      height: 8px;
+
+      :not(:last-child) {
+        margin-right: 10px;
+      }
     }
   }
 `;
 
 export const SlideItem = styled(SwiperSlide)`
-  max-width: max-content;
+  max-width: 280px;
+
+  @media ${devices.tab} {
+    max-width: 600px;
+  }
+
+  @media ${devices.desk} {
+    max-width: max-content;
+  }
 `;

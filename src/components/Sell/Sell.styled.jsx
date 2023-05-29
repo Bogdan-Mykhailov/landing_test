@@ -195,7 +195,7 @@ export const GalleryButtonImg = styled.img`
 `;
 
 export const BiggestSlierWrapper = styled.div`
-  width: 300px;
+  width: 280px;
   height: 250px;
 
   @media ${devices.tab} {

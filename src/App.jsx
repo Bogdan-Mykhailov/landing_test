@@ -22,7 +22,7 @@ export function App() {
       <Hero/>
       <Recommendation/>
       <Sell/>
-      {/* <Review/> */}
+      <Review/>
       {/* <TipsAndTricks /> */}
       {/* <Subscribe/> */}
       {/* <Footer/> */}
