@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { devices } from '../../common-styles/MediaQueries';
 
 export const SubscribeWrapper = styled.div`
   display: flex;
@@ -14,8 +15,17 @@ export const SubscribeWrapper = styled.div`
 `;
 
 export const SubscribeLeftContent = styled.div`
-  position: relative;
-  width: 253px;
+  display: none;
+
+  @media ${devices.desk} {
+    display: block;
+    position: relative;
+    width: 253px;
+  }
+
+  @media (max-width: 1300px) {
+    display: none;
+  }
 `;
 
 export const SubscribeImage1 = styled.img`
@@ -61,41 +71,79 @@ export const SubscribeImage4 = styled.img`
 `;
 
 export const Feedback = styled.div`
+  width: 280px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+
+  @media ${devices.desk} {
+    width: max-content;
+  }
 `;
 
 export const FeedbackTitle = styled.h2`
-  font-family: Lexen300, sans-serif;
-  font-size: 32px;
-  line-height: 48px;
-  text-align: center;
-  text-transform: capitalize;
-  color: var(--headline);
-  margin-bottom: 32px;
+  margin: 0 0 20px 10px;
+  
+  @media ${devices.desk} {
+    margin-left: 0;
+    font-family: Lexen300, sans-serif;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--headline);
+    margin-bottom: 32px;
+  }
 `;
 
 export const FeedbackWrapper = styled.div`
   display: inline-flex;
   align-items: center;
   background: var(--white);
-  padding: 4px 4px 4px 24px;
-  gap: 16px;
+  gap: 5px;
+  width: 280px;
   box-shadow: 0 9px 32px rgba(89, 92, 219, 0.05);
   border-radius: 32px;
-  max-width: max-content;
+
+  @media ${devices.tab} {
+    padding: 0 0 0 24px;
+    gap: 10px;
+    width: 480px;
+  }
+  
+  @media ${devices.desk} {
+    padding: 4px 4px 4px 24px;
+    gap: 16px;
+    width: 496px;
+  }
 `;
 
 export const EmailIcon = styled.img`
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
+  margin-left: 4px;
+  
+  @media ${devices.desk} {
+    margin-left: 0;
+    width: 24px;
+    height: 24px;
+  }
 `;
 
 export const SubscribeRightContent = styled.div`
-  position: relative;
-  width: 270px;
+  display: none;
+
+  @media ${devices.desk} {
+    display: block;
+    position: relative;
+    width: 270px;
+  }
+
+  @media (max-width: 1300px) {
+    display: none;
+  }
 `;
 
 export const SubscribeImage5 = styled.img`
@@ -106,6 +154,7 @@ export const SubscribeImage5 = styled.img`
   top: 44px;
   border: 2px solid var(--white);
   border-radius: 24px;
+
 `;
 
 export const SubscribeImage6 = styled.img`

@@ -24,7 +24,7 @@ export function App() {
       <Sell/>
       <Review/>
       <TipsAndTricks />
-      {/* <Subscribe/> */}
+      <Subscribe/>
       {/* <Footer/> */}
     </AppWrapper>
   );
