@@ -1,10 +1,22 @@
 import styled from 'styled-components';
+import { devices } from '../../common-styles/MediaQueries';
 
 export const FooterWrapper = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
+  align-items: center;
+
+  @media ${devices.desk} {
+    align-items: start;
+    flex-direction: row;
+  }
+
+  @media (max-width: 1200px) {
+    align-items: center;
+    flex-direction: column;
+  }
 `;
 
 export const InformationWrapper = styled.div`
@@ -27,8 +39,17 @@ export const SocialWrapper = styled.div`
 
 export const SocialLinks = styled.li`
   list-style: none;
+
   :not(:last-child) {
     margin-right: 24px;
+  }
+
+  @media ${devices.desk} {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 1200px) {
+    margin-bottom: 20px;
   }
 `;
 

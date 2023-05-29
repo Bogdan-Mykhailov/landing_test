@@ -25,7 +25,7 @@ export function App() {
       <Review/>
       <TipsAndTricks />
       <Subscribe/>
-      {/* <Footer/> */}
+      <Footer/>
     </AppWrapper>
   );
 }
