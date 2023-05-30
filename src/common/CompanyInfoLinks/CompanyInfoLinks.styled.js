@@ -4,7 +4,7 @@ import { devices } from '../../common-styles/MediaQueries';
 export const InfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  
+
   @media ${devices.desk} {
     flex-direction: row;
   }
@@ -29,7 +29,7 @@ export const InfoTitle = styled.h3`
   line-height: 22px;
   text-transform: capitalize;
   margin-bottom: 24px;
-  color: #0E1735;
+  color: var(--headlineDark);
   font-family: Lexend600, sans-serif;
 `;
 
@@ -40,12 +40,13 @@ export const InfoListItem = styled.li`
   line-height: 18px;
   text-transform: capitalize;
   font-family: Lexend300, sans-serif;
+
   :not(:last-child) {
     margin-bottom: 18px;
   }
 `;
 
 export const InfoLink = styled.a`
-  color: #888B97;
+  color: var(--grey);
 `;
 

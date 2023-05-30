@@ -28,10 +28,13 @@ export const Header = () => {
         isOpen={isOpen}
         handleBurgerOpen={handleBurgerOpen}
       />
+
       <NawWrapper>
         <NavMenu>
           <MenuItem>About Us</MenuItem>
+
           <MenuItem>Article</MenuItem>
+
           <Select
             title="Property"
             icon={arrowDown}
@@ -40,6 +43,7 @@ export const Header = () => {
 
         <MenuButton>Sign Up!</MenuButton>
       </NawWrapper>
+
       <BurgerImage
         src={burger}
         onClick={handleBurgerOpen}

@@ -28,7 +28,7 @@ export const CardSubTitle = styled.span`
   font-size: 20px;
   line-height: 32px;
   font-family: Lexend400, sans-serif;
-  color: #3C4563;
+  color: var(--font);
   margin-bottom: 24px;
 `;
 
@@ -54,7 +54,7 @@ export const PersonalName = styled.span`
   font-size: 18px;
   line-height: 24px;
   font-family: Lexend400, sans-serif;
-  color: #0E1735;
+  color: var(--headlineDark);
 `;
 
 export const PersonalAddress = styled.span`
@@ -62,5 +62,5 @@ export const PersonalAddress = styled.span`
   line-height: 22px;
   font-family: Lexend400, sans-serif;
   align-self: stretch;
-  color: #888B97;
+  color: var(--grey);
 `;

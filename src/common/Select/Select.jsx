@@ -22,8 +22,14 @@ export const Select = ({title, icon}) => {
         onClick={handleToggleClick}
       >
         {title}
-        <SelectIcon toggle={toggle} src={icon} alt="Arrow down"/>
+
+        <SelectIcon
+          toggle={toggle}
+          src={icon}
+          alt="Arrow down"
+        />
       </SelectButton>
+
       <SelectStyled toggle={toggle}>
         <ItemStyled onClick={handleToggleClick} >
           <ItemLink href="#">House</ItemLink>

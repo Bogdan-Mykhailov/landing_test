@@ -70,7 +70,7 @@ export const AuthorName = styled.span`
   font-size: 14px;
   line-height: 22px;
   font-family: Lexend400, sans-serif;
-  color: #3C4563;
+  color: var(--font);
 `;
 
 export const ArticleTitle = styled.p`
@@ -79,7 +79,7 @@ export const ArticleTitle = styled.p`
   line-height: 32px;
   text-transform: capitalize;
   margin-bottom: 16px;
-  color: #1B1C57;
+  color: var(--headline);
   width: 260px;
 
   @media ${devices.tab} {
@@ -97,10 +97,10 @@ export const ArticleInfoDesc = styled.div`
   font-family: Lexend400, sans-serif;
   font-size: 14px;
   line-height: 24px;
-  color: #888B97;
+  color: var(--grey);
 `;
 
 export const ArticleIcon = styled.img`
-width: 24px;
+  width: 24px;
   height: 24px;
 `;

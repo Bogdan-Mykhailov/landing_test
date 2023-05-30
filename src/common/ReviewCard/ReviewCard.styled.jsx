@@ -63,7 +63,7 @@ export const ReviewDesc = styled.p`
   font-family: Lexend300, sans-serif;
   font-size: 14px;
   line-height: 24px;
-  color: #626687;
+  color: var(--neutral);
   opacity: 0.75;
   margin-bottom: 24px;
   width: 240px;
@@ -116,14 +116,14 @@ export const ReviewName = styled.span`
   align-self: stretch;
   font-size: 14px;
   line-height: 22px;
-  color: #0E1735;
+  color: var(--headlineDark);
 `;
 
 export const ReviewPosition = styled.span`
   font-family: Lexend400, sans-serif;
   font-size: 14px;
   line-height: 22px;
-  color: #888B97;
+  color: var(--grey);
   align-self: stretch;
 `;
 
@@ -148,5 +148,5 @@ export const Rate = styled.p`
   font-family: Lexend600, sans-serif;
   font-size: 20px;
   line-height: 28px;
-  color: #3C4563;
+  color: var(--font);
 `;

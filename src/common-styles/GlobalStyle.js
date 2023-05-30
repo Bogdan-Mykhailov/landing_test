@@ -13,31 +13,37 @@ const fontFaces = css`
     src: url(${LexendMedium});
     font-style: normal;
   }
+  
   @font-face {
     font-family: 'Lexend400';
     src: url(${LexendRegular});
     font-style: normal;
   }
+  
   @font-face {
     font-family: 'Lexend600';
     src: url(${LexendSemiBold});
     font-style: normal;
   }
+  
   @font-face {
     font-family: 'Lexend700';
     src: url(${LexendBold});
     font-style: normal;
   } 
+  
   @font-face {
     font-family: 'Lexend800';
     src: url(${LexendExtraBold});
     font-style: normal;
   }
+  
   @font-face {
     font-family: 'Lexend900';
     src: url(${LexendBlack});
     font-style: normal;
   } 
+  
   @font-face {
     font-family: 'Lexend300';
     src: url(${LexendLight});
@@ -47,12 +53,11 @@ const fontFaces = css`
 
 const GlobalStyle = createGlobalStyle`
   ${fontFaces}
-
   html {
     font-family: LexendRegular, Roboto, Oxygen, sans-serif;
     box-sizing: border-box;
   }
-  
+
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -70,7 +75,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
-  
+
   a {
     text-decoration: none;
   }
@@ -85,15 +90,20 @@ const GlobalStyle = createGlobalStyle`
     display: block;
     height: auto;
   }
-  
+
   :root {
     --headline: #1B1C57;
+    --headlineDark: #0E1735;
     --neutral: #626687;
     --white: #FFF;
     --green: #10B981;
+    --greenLight: #D1FAE5;
     --greenDark: #047857;
     --grey: #888B97;
     --gold: #F59E0B;
+    --font: #3C4563;
+    --borderLight: #E0E3EB;
+    --fontExtra: #68799F;
   }
 `;
 

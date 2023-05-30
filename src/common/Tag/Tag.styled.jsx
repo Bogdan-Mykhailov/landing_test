@@ -3,24 +3,7 @@ import styled from 'styled-components';
 export const TagStyled = styled.div`
   gap: 10px;
   display: inline-flex;
-  background: ${({type}) => {
-    switch (type) {
-      case 'popular': {
-        return '#FEE2E2';
-      }
-
-      case 'newHouse': {
-        return '#DBEAFE';
-      }
-
-      case 'bestDeals': {
-        return '#D1FAE5';
-      }
-      
-      default:
-        return 'yellow'
-    }
-  }};
+  background: ${({type}) => type };
   border-radius: 32px;
   padding: 8px 16px;
   position: absolute;
@@ -32,24 +15,7 @@ export const TagTitle = styled.span`
   font-size: 14px;
   line-height: 18px;
   text-transform: capitalize;
-  color: ${({type}) => {
-    switch (type) {
-      case 'popular': {
-        return '#EF4444';
-      }
-
-      case 'newHouse': {
-        return '#1D4ED8';
-      }
-
-      case 'bestDeals': {
-        return '#047857';
-      }
-
-      default:
-        return 'yellow'
-    }
-  }};;
+  color: ${({titleColor}) => titleColor};
   font-family: Lexend400, sans-serif;
 `;
 

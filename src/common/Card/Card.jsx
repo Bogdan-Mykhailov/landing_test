@@ -14,8 +14,8 @@ import {
 
 export const Card = ({ cardData }) => {
   const { card, title, subtitle, personalInfo } = cardData;
-  const {cover, tagTitle, tagIcon, tagType} = card;
-  const {image, name, address} = personalInfo;
+  const { cover, tagTitle, tagIcon, tagType } = card;
+  const { image, name, address } = personalInfo;
 
   return (
     <CardWrapper>
@@ -36,6 +36,7 @@ export const Card = ({ cardData }) => {
 
         <PersonalWrapper>
           <PersonalName>{name}</PersonalName>
+
           <PersonalAddress>{address}</PersonalAddress>
         </PersonalWrapper>
       </PersonalInfo>

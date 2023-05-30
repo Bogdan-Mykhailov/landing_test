@@ -14,6 +14,11 @@ export const ButtonStyled = styled.button`
   line-height: 22px;
   gap: ${({ gap }) => gap ? '4px' : '16px'};
   cursor: pointer;
+  
+  &:hover {
+    transform: scale(0.99);
+    transition: 0.3s;
+  }
 `;
 
 export const Icon = styled.img`

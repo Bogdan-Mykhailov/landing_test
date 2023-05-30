@@ -54,7 +54,7 @@ export const ItemStyled = styled.li`
   border: 1px solid transparent;
 
   :hover {
-    background-color: #D1FAE5;
+    background-color: var(--greenLight);
 
     @media (min-width: 1200px) {
       border: 1px solid transparent;

@@ -123,7 +123,7 @@ export const SearchWrapper = styled.div`
   display: flex;
   align-items: center;
   background: var(--white);
-  border: 1px solid #E0E3EB;
+  border: 1px solid var(--borderLight);
   border-radius: 32px;
   width: 300px;
 
@@ -290,5 +290,5 @@ export const SliderSubTitle = styled.p`
   font-size: 12px;
   line-height: 20px;
   font-family: Lexend300, sans-serif;
-  color: #68799F;
+  color: var(--fontExtra);
 `;

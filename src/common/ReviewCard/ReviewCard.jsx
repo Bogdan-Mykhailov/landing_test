@@ -43,12 +43,14 @@ export const ReviewCard = ({ card }) => {
 
             <ReviewWrapper>
               <ReviewName>{userName}</ReviewName>
+
               <ReviewPosition>{position}</ReviewPosition>
             </ReviewWrapper>
           </ReviewInfo>
 
           <Rating>
             <RatingIcon src={star} alt="Rating star"/>
+
             <Rate>{rating}</Rate>
           </Rating>
         </RatingStyled>

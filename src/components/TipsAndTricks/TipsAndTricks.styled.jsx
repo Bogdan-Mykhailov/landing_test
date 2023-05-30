@@ -50,7 +50,6 @@ export const TipsAndTricksLeftSide = styled.div`
   @media ${devices.tab} {
     max-width: 572px;
   }
-  
 `;
 
 export const TipsAndTricksRightSide = styled.div`
@@ -61,8 +60,9 @@ export const TipsAndTricksRightSide = styled.div`
   @media ${devices.tab} {
     align-items: center;
   }
-  
+
   @media ${devices.desk} {
+    align-items: start;
     width: 560px;
   }
 `;
@@ -107,7 +107,7 @@ export const AuthorName = styled.span`
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
-  color: #3C4563;
+  color: var(--font);
 `;
 
 export const ArticleRightTitle = styled.span`
@@ -115,7 +115,7 @@ export const ArticleRightTitle = styled.span`
   font-size: 24px;
   line-height: 32px;
   text-transform: capitalize;
-  color: #1B1C57;
+  color: var(--headline);
   margin-bottom: 12px;
   width: 260px;
 
@@ -128,7 +128,7 @@ export const ArticleParagraph = styled.p`
   font-family: Lexend400, sans-serif;
   font-size: 14px;
   line-height: 24px;
-  color: #626687;
+  color: var(--neutral);
   opacity: 0.75;
   margin-bottom: 16px;
   width: 260px;
@@ -152,13 +152,6 @@ export const ArticleIcon = styled.img`
 export const ArticleDesc = styled.span`
   font-size: 14px;
   line-height: 24px;
-  color: #888B97;
+  color: var(--grey);
   font-family: Lexend400, sans-serif;
 `;
-
-
-
-
-
-
-

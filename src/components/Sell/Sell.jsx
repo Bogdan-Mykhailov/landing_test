@@ -62,7 +62,7 @@ export const Sell = () => {
     <Container>
       <SellWrapper>
         <SellContent>
-          <div>
+          <>
             <Title title="ReadyTo TipsAndTricks!"/>
 
             <Subtitle marginTop={'marginTop'}
@@ -111,7 +111,7 @@ export const Sell = () => {
 
               <Button iconPosition="before" icon={phone} title="Contact Now"/>
             </ContactNowWrapper>
-          </div>
+          </>
         </SellContent>
 
         <SellGallery>

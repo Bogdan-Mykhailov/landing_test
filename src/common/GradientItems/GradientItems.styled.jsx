@@ -82,80 +82,30 @@ export const GradientHeaderStyled6 = styled.div`
   transform: rotate(90deg);
 `;
 
-// export const GradientHeaderStyled4 = styled.div`
-//   position: absolute;
-//   width: 438px;
-//   height: 494px;
-//   left: 1593px;
-//   top: 1574px;
-//
-//   background: #FFFA82;
-//   opacity: 0.3;
-//   filter: blur(60px);
-//   transform: rotate(90deg);
-// `;
-//
-// export const GradientHeaderStyled4 = styled.div`
-//   position: absolute;
-//   width: 438px;
-//   height: 494px;
-//   left: 1593px;
-//   top: 1574px;
-//
-//   background: #FFFA82;
-//   opacity: 0.3;
-//   filter: blur(60px);
-//   transform: rotate(90deg);
-// `;
-//
-// export const GradientHeaderStyled4 = styled.div`
-//   position: absolute;
-//   width: 438px;
-//   height: 494px;
-//   left: 1593px;
-//   top: 1574px;
-//
-//   background: #FFFA82;
-//   opacity: 0.3;
-//   filter: blur(60px);
-//   transform: rotate(90deg);
-// `;
-//
-// export const GradientHeaderStyled4 = styled.div`
-//   position: absolute;
-//   width: 438px;
-//   height: 494px;
-//   left: 1593px;
-//   top: 1574px;
-//
-//   background: #FFFA82;
-//   opacity: 0.3;
-//   filter: blur(60px);
-//   transform: rotate(90deg);
-// `;
-//
-// export const GradientHeaderStyled4 = styled.div`
-//   position: absolute;
-//   width: 438px;
-//   height: 494px;
-//   left: 1593px;
-//   top: 1574px;
-//
-//   background: #FFFA82;
-//   opacity: 0.3;
-//   filter: blur(60px);
-//   transform: rotate(90deg);
-// `;
-//
-// export const GradientHeaderStyled4 = styled.div`
-//   position: absolute;
-//   width: 438px;
-//   height: 494px;
-//   left: 1593px;
-//   top: 1574px;
-//
-//   background: #FFFA82;
-//   opacity: 0.3;
-//   filter: blur(60px);
-//   transform: rotate(90deg);
-// `;
+export const GradientHeaderStyled7 = styled.div`
+  position: absolute;
+  z-index: -1;
+  width: 438px;
+  height: 494px;
+  right: 0;
+  bottom: 0;
+
+  background: #82BBFF;
+  opacity: 0.3;
+  filter: blur(60px);
+  transform: rotate(90deg);
+`;
+
+export const GradientHeaderStyled8 = styled.div`
+  position: absolute;
+  z-index: -1;
+  width: 438px;
+  height: 494px;
+  right: 294px;
+  bottom: 0;
+
+  background: #B9FF82;
+  opacity: 0.3;
+  filter: blur(60px);
+  transform: rotate(90deg);
+`;

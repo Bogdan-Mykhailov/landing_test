@@ -23,7 +23,6 @@ export const ModalBackground = styled.div`
 export const ModalContent = styled.div`
   transform: scale(0.5);
   width: max-content;
-  background-color: gray;
   transition: 0.5s;
   display: flex;
   align-items: center;
@@ -32,7 +31,6 @@ export const ModalContent = styled.div`
   background-position: center;
   background-size: cover;
   
-
   @media ${devices.tab} {
     transform: scale(0.6);
   }

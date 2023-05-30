@@ -54,16 +54,16 @@ export const MenuItem = styled.li`
   line-height: 18px;
   font-family: Lexend600, sans-serif;
   cursor: pointer;
+  
   :not(:last-child) {
     margin-right: 24px;
   }
-  
+
   @media (min-width: 1200px) {
     color: var(--white);
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
   }
-
 
   :hover {
     border: 1px solid var(--greenDark);
@@ -87,7 +87,7 @@ export const MenuButton = styled.button`
 
   @media (min-width: 1200px) {
     color: var(--greenDark);
-    background: #D1FAE5;
+    background: var(--greenLight);
   }
 
   :hover {

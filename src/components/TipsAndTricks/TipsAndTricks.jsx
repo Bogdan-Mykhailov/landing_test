@@ -38,6 +38,7 @@ export const TipsAndTricks = () => {
           center
           title="See tips and trick from our partnership"
         />
+
         <SubtitleWrap>
           <Subtitle subtitle={subtitle}/>
         </SubtitleWrap>

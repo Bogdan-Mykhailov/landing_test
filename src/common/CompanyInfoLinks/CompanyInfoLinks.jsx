@@ -18,9 +18,15 @@ export const CompanyInfoLinks = () => (
       return (
         <InfoList key={id}>
           <InfoTitle>{title}</InfoTitle>
-          {links.map(({id, linkTitle, address}) => (
+          {links.map(({
+            id,
+            linkTitle,
+            address
+          }) => (
             <InfoListItem key={id}>
-              <InfoLink href={address}>{linkTitle}</InfoLink>
+              <InfoLink href={address}>
+                {linkTitle}
+              </InfoLink>
             </InfoListItem>
           ))}
         </InfoList>

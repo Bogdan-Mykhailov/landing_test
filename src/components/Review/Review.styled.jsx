@@ -58,7 +58,7 @@ export const StyledReviewSwaper = styled(Swiper)`
     }
 
     .swiper-pagination-bullet-active {
-      background: #3C4563;
+      background: var(--font);
       width: 8px;
       height: 8px;
 

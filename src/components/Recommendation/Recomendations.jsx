@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import {
+  ButtonWrapper,
+  ItemIcon,
+  ItemStyled,
   NavigationWrapper,
+  RecommendationButton,
   RecommendationCategories,
+  RecommendationIcon,
   RecommendationWrapper,
 } from './Recomendations.styled';
 import house from '../../assets/icons/house.svg';
@@ -10,13 +15,6 @@ import apartments from '../../assets/icons/apartment.svg';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { CardWrapper, Container, Subtitle, Title } from '../../common';
-import {
-  ButtonWrapper,
-  ItemIcon,
-  ItemStyled,
-  RecommendationButton,
-  RecommendationIcon,
-} from '../../common/CategoryItem/CategoryItem.styled';
 import { sortedByType } from '../../utils/helpers';
 import { APARTMENT, HOUSE, VILLA } from '../../utils/constants';
 import arrowLeft from '../../assets/icons/arrow_left.svg';
@@ -61,7 +59,7 @@ export const Recommendation = () => {
   };
 
   const isCorrectArrowLeft = isStart ? arrowLeftDark : arrowLeft;
-  const isCorrectArrowRight = isEnd ? arrowRightDark :  arrowRight;
+  const isCorrectArrowRight = isEnd ? arrowRightDark : arrowRight;
 
   return (
     <Container>
@@ -109,7 +107,8 @@ export const Recommendation = () => {
             </ItemStyled>
           </RecommendationCategories>
           <ButtonWrapper>
-            <RecommendationButton isStart={isStart} className="prev prev-disabled">
+            <RecommendationButton isStart={isStart}
+                                  className="prev prev-disabled">
               <RecommendationIcon
                 src={isCorrectArrowLeft}
                 alt="Arrow left"

@@ -28,7 +28,7 @@ export const Description = styled.p`
   font-family: Lexend300, sans-serif;
   font-size: 14px;
   line-height: 24px;
-  color: #626687;
+  color: var(--neutral);
   opacity: 0.75;
   margin: 16px 0 30px;
 `;

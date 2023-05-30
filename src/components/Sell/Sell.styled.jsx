@@ -35,7 +35,7 @@ export const HouseDetailDesc = styled.p`
   font-family: Lexend300, sans-serif;
   font-size: 16px;
   line-height: 28px;
-  color: #626687;
+  color: var(--neutral);
   opacity: 0.75;
   margin-bottom: 16px;
 `;
@@ -44,7 +44,7 @@ export const HouseDetailSpan = styled.span`
   font-family: Lexend500, sans-serif;
   font-size: 16px;
   line-height: 28px;
-  color: #1B1C57;
+  color: var(--headline);
   opacity: 0.75;
   margin-bottom: 16px;
 `;
@@ -68,7 +68,7 @@ export const HouseDetailItem = styled.li`
   font-size: 16px;
   line-height: 20px;
   text-transform: capitalize;
-  color: #3C4563;
+  color: var(--font);
 `;
 
 export const HouseDetailsIcon = styled.img`
@@ -119,14 +119,14 @@ export const SellName = styled.span`
   align-self: stretch;
   font-size: 18px;
   line-height: 24px;
-  color: #0E1735;
+  color: var(--headlineDark);
 `;
 
 export const SellPosition = styled.span`
   font-family: Lexend400, sans-serif;
   font-size: 16px;
   line-height: 24px;
-  color: #888B97;
+  color: var(--grey);
   align-self: stretch;
 `;
 

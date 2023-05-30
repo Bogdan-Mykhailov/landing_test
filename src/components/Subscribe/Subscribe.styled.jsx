@@ -159,7 +159,6 @@ export const SubscribeImage5 = styled.img`
   top: 44px;
   border: 2px solid var(--white);
   border-radius: 24px;
-
 `;
 
 export const SubscribeImage6 = styled.img`
@@ -168,7 +167,7 @@ export const SubscribeImage6 = styled.img`
   height: 36px;
   left: 34px;
   top: 143px;
-  border: 2px solid #FFFFFF;
+  border: 2px solid var(--white);
   filter: drop-shadow(0px 9px 32px rgba(89, 92, 219, 0.1));
   border-radius: 50%;
 `;
@@ -179,7 +178,7 @@ export const SubscribeImage7 = styled.img`
   height: 36px;
   left: 148px;
   top: 107px;
-  border: 2px solid #FFFFFF;
+  border: 2px solid var(--white);
   filter: drop-shadow(0px 9px 32px rgba(89, 92, 219, 0.1));
   border-radius: 50%;
 `;
@@ -190,6 +189,6 @@ export const SubscribeImage8 = styled.img`
   height: 55px;
   left: 142px;
   top: 197px;
-  border: 2px solid #FFFFFF;
+  border: 2px solid var(--white);
   border-radius: 24px;
 `;
