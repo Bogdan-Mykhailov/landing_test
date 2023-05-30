@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+![Logo](https://github.com/Bogdan-Mykhailov/landing_test/assets/91826635/0c4d5c0d-d9ae-41bc-9460-4b349670e8d4)
+---
+<h4>The Hounter is a web application designed to help users find apartments, houses, or villas for rent. With a user-friendly interface and advanced search capabilities, this app simplifies the process of discovering suitable rental properties. Whether you're looking for a cozy apartment, a spacious house, or a luxurious villa, this app provides the necessary tools to browse and filter available listings.</h4>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<hr/>
+<a href='https://bogdan-mykhailov.github.io/landing_test/' rel='nofollow'>
+<img src="https://img.shields.io/badge/Hounter_Demo_Link-4e93e6?style=for-the-badge&logo=Portfolio&logoColor=black" alt="portfolio">
+</a>
 
-## Available Scripts
+<p>The site is designed to provide a user-friendly and intuitive shopping experience for customers, while also providing detailed information about each house, and features a responsive layout that is optimized for various screen sizes.</p>
 
-In the project directory, you can run:
+<h4>Desktop</h4>
+<img width="1749" alt="Screenshot 2023-05-30 at 17 39 17" src="https://github.com/Bogdan-Mykhailov/landing_test/assets/91826635/e193e040-fa23-4b93-bfc9-6bfc555b931b">
 
-### `yarn start`
+<h4>Tablet</h4>
+<img width="768" alt="Screenshot 2023-05-30 at 17 39 35" src="https://github.com/Bogdan-Mykhailov/landing_test/assets/91826635/8a67a6e1-d754-4dee-916b-ac5bcb0520e4">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h4>Mobile</h4>
+<img width="374" alt="Screenshot 2023-05-30 at 17 33 02" src="https://github.com/Bogdan-Mykhailov/landing_test/assets/91826635/07328475-d705-4554-a0da-56d6b6689fc3">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h3>Key Features:</h3>
+  
+<ul>
+  <li>
+    <strong>Property Listings:</strong> The app displays a wide range of rental properties, including apartments, houses, and villas.
+    Each listing provides essential details such as location, size, amenities, and rental price.
+  </li>
+ <li>
+    <strong>Search and Filter:</strong> Users can perform searches based on their preferences, such as location, property type, number of bedrooms, or any other relevant criteria. The app offers filtering options to narrow down the search results and find the most suitable options.
+  </li>
+  <li>
+    <strong>Sorting:</strong> The app includes sorting functionality, allowing users to organize the search results based on different parameters, such as price, size, or property type. This helps users quickly identify the most relevant listings.
+  </li>
+  <li>
+    <strong>Detailed Property View:</strong> Users can view detailed information about each property, including high-quality images, descriptions, floor plans, and contact information. This enables users to make informed decisions about the rental properties they are interested in.
+  </li>
+</ul>
+<img width="1689" alt="Screenshot 2023-05-30 at 17 32 29" src="https://github.com/Bogdan-Mykhailov/landing_test/assets/91826635/cf7866ac-6819-478b-9159-6b658a95960f">
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h3>Tech Stack</h3>
+  
+<p>The Hounter web site is built using modern web technologies and frameworks, including:</p>
 
-### `yarn build`
+<ul>
+  <li>React</li>
+  <li>Styled Components</li>
+  <li>Swiper</li>
+</ul>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h3>Installation</h3>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p>To run the Hounter App locally, you can follow these steps:</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<ol>
+  <li>Clone the repository: <code>git clone https://github.com/Bogdan-Mykhailov/landing_test.git</code></li>
+  <li>Navigate to the project directory: <code>cd landing_test</code></li>
+  <li>Install dependencies with <code>yarn</code></li>
+  <li>Run the app with <code>yarn start</code></li>
+</ol>
