@@ -97,9 +97,14 @@ export const MenuButton = styled.button`
 `;
 
 export const BurgerImage = styled.img`
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   display: block;
+
+  @media ${devices.tab} {
+    width: 20px;
+    height: 20px;
+  }
 
   @media ${devices.desk} {
     display: none;

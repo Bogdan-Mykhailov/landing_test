@@ -12,7 +12,7 @@ export const CardImage = styled.div`
   background-position: center;
   background-size: cover;
   border-radius: 8px;
-  width: 280px;
+  width: 240px;
   height: 240px;
   position: relative;
   opacity: 0.7;
@@ -30,7 +30,7 @@ export const ReviewCardWrapper = styled.div`
   background: var(--white);
   box-shadow: 0 9px 32px rgba(89, 92, 219, 0.05);
   border-radius: 16px;
-  width: 280px;
+  width: 240px;
   padding: 0 10px;
 
   @media ${devices.tab} {
@@ -52,6 +52,11 @@ export const ReviewTitle = styled.h2`
   text-transform: capitalize;
   color: var(--headline);
   margin-bottom: 16px;
+  text-align: center;
+
+  @media ${devices.tab} {
+    text-align: start;
+  }
 `;
 
 export const ReviewDesc = styled.p`
@@ -61,9 +66,11 @@ export const ReviewDesc = styled.p`
   color: #626687;
   opacity: 0.75;
   margin-bottom: 24px;
-  width: 280px;
+  width: 240px;
+  text-align: center;
 
   @media ${devices.tab} {
+    text-align: start;
     width: 480px;
   }
   
@@ -80,9 +87,16 @@ export const RatingStyled = styled.div`
 
 export const ReviewInfo = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 0;
-  gap: 24px;
+  padding: 5px;
+  gap: 5px;
+
+  @media ${devices.tab} {
+    flex-direction: row;
+    padding: 0;
+    gap: 24px;
+  }
 `;
 
 export const ReviewImage = styled.img`
@@ -116,7 +130,13 @@ export const ReviewPosition = styled.span`
 export const Rating = styled.div`
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 6px;
+  padding: 10px;
+
+  @media ${devices.desk} {
+    gap: 16px;
+    padding: 0;
+  }
 `;
 
 export const RatingIcon = styled.img`

@@ -21,7 +21,6 @@ export const TipsAndTricksContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   width: 280px;
 
   @media ${devices.tab} {
@@ -46,24 +45,38 @@ export const TipsAndTricksContent = styled.div`
 `;
 
 export const TipsAndTricksLeftSide = styled.div`
-  max-width: 572px;
+  max-width: 280px;
+  
+  @media ${devices.tab} {
+    max-width: 572px;
+  }
+  
 `;
 
 export const TipsAndTricksRightSide = styled.div`
-  max-width: 560px;
+  width: 280px;
   display: flex;
   flex-direction: column;
+
+  @media ${devices.tab} {
+    align-items: center;
+  }
+  
+  @media ${devices.desk} {
+    width: 560px;
+  }
 `;
 
 export const RightSideArticleImg = styled.img`
   margin-top: 20px;
-  width: 100%;
+  width: 250px;
   height: 280px;
   object-fit: cover;
   border-radius: 16px;
   margin-bottom: 24px;
   
   @media ${devices.tab} {
+    width: 560px;
     margin-top: 20px;
   }
 
@@ -74,7 +87,6 @@ export const RightSideArticleImg = styled.img`
   @media ${devices.desk} {
     margin-top: 0;
   }
-  
 `;
 
 export const AuthorArticleWrap = styled.div`
@@ -105,6 +117,11 @@ export const ArticleRightTitle = styled.span`
   text-transform: capitalize;
   color: #1B1C57;
   margin-bottom: 12px;
+  width: 260px;
+
+  @media ${devices.tab} {
+    width: 560px;
+  }
 `;
 
 export const ArticleParagraph = styled.p`
@@ -114,6 +131,11 @@ export const ArticleParagraph = styled.p`
   color: #626687;
   opacity: 0.75;
   margin-bottom: 16px;
+  width: 260px;
+
+  @media ${devices.tab} {
+    width: 560px;
+  }
 `;
 
 export const ArticleInfoDesc = styled.div`

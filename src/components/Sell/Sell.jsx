@@ -115,10 +115,10 @@ export const Sell = () => {
         </SellContent>
 
         <SellGallery>
-
           <Modal modalMode={modal} closeModal={toggleModal}>
             {image && <img src={image} alt="Modal img"/>}
           </Modal>
+
           <BiggestSlierWrapper>
             <Swiper
               style={{zIndex: 0}}
@@ -180,6 +180,7 @@ export const Sell = () => {
                   </SwiperSlide>))}
               </Swiper>
             </MiddleSliderWrapper>
+
             <SmallSliderWrapper>
               <Swiper
                 style={{zIndex: 0}}

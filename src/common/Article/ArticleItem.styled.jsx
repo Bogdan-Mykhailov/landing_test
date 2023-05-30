@@ -3,13 +3,13 @@ import { devices } from '../../common-styles/MediaQueries';
 
 export const Article = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-between;
   flex-direction: column;
   width: 280px;
   margin-bottom: 20px;
 
   @media ${devices.tab} {
-    
     flex-direction: row;
     width: max-content;
     &:not(:last-child) {
@@ -25,7 +25,7 @@ export const Article = styled.div`
 `;
 
 export const ArticleImage = styled.img`
-  width: 200px;
+  width: 250px;
   height: 144px;
   border-radius: 16px;
   margin-right: 32px;
@@ -33,6 +33,8 @@ export const ArticleImage = styled.img`
   margin-bottom: 14px;
 
   @media ${devices.tab} {
+    width: 200px;
+    height: 144px;
     margin-bottom: 0;
   }
 
@@ -71,13 +73,18 @@ export const AuthorName = styled.span`
   color: #3C4563;
 `;
 
-export const ArticleTitle = styled.span`
+export const ArticleTitle = styled.p`
   font-family: Lexend400, sans-serif;
   font-size: 18px;
   line-height: 32px;
   text-transform: capitalize;
   margin-bottom: 16px;
   color: #1B1C57;
+  width: 260px;
+
+  @media ${devices.tab} {
+    width: 340px;
+  }
 `;
 
 export const ArticleInfo = styled.div`

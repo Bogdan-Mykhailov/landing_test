@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   padding: 0 20px;
 
   @media ${devices.tab} {
-    padding: 50px 40px;
+    padding: 20px 40px;
   }
 
   @media ${devices.desk} {
@@ -25,8 +25,8 @@ export const ReviewContent = styled.div`
 `;
 
 export const StyledReviewSwaper = styled(Swiper)`
-  width: 280px;
-  height: 300px;
+  width: 240px;
+  height: 400px;
 
   .swiper-pagination {
     display: none;
@@ -70,7 +70,7 @@ export const StyledReviewSwaper = styled(Swiper)`
 `;
 
 export const SlideItem = styled(SwiperSlide)`
-  max-width: 280px;
+  max-width: 240px;
 
   @media ${devices.tab} {
     max-width: 600px;

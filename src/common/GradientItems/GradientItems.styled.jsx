@@ -28,9 +28,10 @@ export const GradientHeaderStyled2 = styled.div`
 
 export const GradientHeaderStyled3 = styled.div`
   position: absolute;
+  z-index: -1;
   width: 438px;
   height: 494px;
-  left: 1534px;
+  right: 0;
   top: 1452px;
 
   background: #FF9882;
@@ -41,9 +42,10 @@ export const GradientHeaderStyled3 = styled.div`
 
 export const GradientHeaderStyled4 = styled.div`
   position: absolute;
+  z-index: -1;
   width: 438px;
   height: 494px;
-  left: 1593px;
+  right: 0;
   top: 1574px;
 
   background: #FFFA82;
@@ -52,4 +54,108 @@ export const GradientHeaderStyled4 = styled.div`
   transform: rotate(90deg);
 `;
 
+export const GradientHeaderStyled5 = styled.div`
+  position: absolute;
+  z-index: -1;
+  width: 438px;
+  height: 494px;
+  left: 0;
+  top: 2930px;
 
+  background: #82FFE8;
+  opacity: 0.3;
+  filter: blur(60px);
+  transform: rotate(90deg);
+`;
+
+export const GradientHeaderStyled6 = styled.div`
+  position: absolute;
+  z-index: -1;
+  width: 438px;
+  height: 494px;
+  left: 0;
+  top: 3187px;
+
+  background: #C8FF82;
+  opacity: 0.3;
+  filter: blur(60px);
+  transform: rotate(90deg);
+`;
+
+// export const GradientHeaderStyled4 = styled.div`
+//   position: absolute;
+//   width: 438px;
+//   height: 494px;
+//   left: 1593px;
+//   top: 1574px;
+//
+//   background: #FFFA82;
+//   opacity: 0.3;
+//   filter: blur(60px);
+//   transform: rotate(90deg);
+// `;
+//
+// export const GradientHeaderStyled4 = styled.div`
+//   position: absolute;
+//   width: 438px;
+//   height: 494px;
+//   left: 1593px;
+//   top: 1574px;
+//
+//   background: #FFFA82;
+//   opacity: 0.3;
+//   filter: blur(60px);
+//   transform: rotate(90deg);
+// `;
+//
+// export const GradientHeaderStyled4 = styled.div`
+//   position: absolute;
+//   width: 438px;
+//   height: 494px;
+//   left: 1593px;
+//   top: 1574px;
+//
+//   background: #FFFA82;
+//   opacity: 0.3;
+//   filter: blur(60px);
+//   transform: rotate(90deg);
+// `;
+//
+// export const GradientHeaderStyled4 = styled.div`
+//   position: absolute;
+//   width: 438px;
+//   height: 494px;
+//   left: 1593px;
+//   top: 1574px;
+//
+//   background: #FFFA82;
+//   opacity: 0.3;
+//   filter: blur(60px);
+//   transform: rotate(90deg);
+// `;
+//
+// export const GradientHeaderStyled4 = styled.div`
+//   position: absolute;
+//   width: 438px;
+//   height: 494px;
+//   left: 1593px;
+//   top: 1574px;
+//
+//   background: #FFFA82;
+//   opacity: 0.3;
+//   filter: blur(60px);
+//   transform: rotate(90deg);
+// `;
+//
+// export const GradientHeaderStyled4 = styled.div`
+//   position: absolute;
+//   width: 438px;
+//   height: 494px;
+//   left: 1593px;
+//   top: 1574px;
+//
+//   background: #FFFA82;
+//   opacity: 0.3;
+//   filter: blur(60px);
+//   transform: rotate(90deg);
+// `;

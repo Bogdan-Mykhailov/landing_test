@@ -4,6 +4,8 @@ import {
   GradientHeaderStyled2,
   GradientHeaderStyled3,
   GradientHeaderStyled4,
+  GradientHeaderStyled5,
+  GradientHeaderStyled6,
 } from './GradientItems.styled';
 
 export const GradientItems = () => {
@@ -13,6 +15,8 @@ export const GradientItems = () => {
       <GradientHeaderStyled2 />
       <GradientHeaderStyled3 />
       <GradientHeaderStyled4 />
+      <GradientHeaderStyled5 />
+      <GradientHeaderStyled6 />
     </>
   );
 };

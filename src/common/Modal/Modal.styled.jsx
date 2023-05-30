@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { devices } from '../../common-styles/MediaQueries';
 
 export const ModalBackground = styled.div`
   height: 100vh;
@@ -21,15 +22,23 @@ export const ModalBackground = styled.div`
 
 export const ModalContent = styled.div`
   transform: scale(0.5);
+  width: max-content;
+  background-color: gray;
   transition: 0.5s;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 65%;
   background-image: ${({image}) => image && `url(${image})`};
   background-position: center;
   background-size: cover;
+  
 
-  ${({ active }) => active && `transform: scale(1);`}
+  @media ${devices.tab} {
+    transform: scale(0.6);
+  }
+  
+  @media ${devices.desk} {
+    transform: scale(1);
+  }
 `;
 

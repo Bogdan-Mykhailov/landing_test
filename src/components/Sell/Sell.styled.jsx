@@ -133,7 +133,7 @@ export const SellPosition = styled.span`
 export const SellGallery = styled.div`
   margin-top: 30px;
   position: relative;
-
+  
   @media ${devices.desk} {
     width: 528px;
     height: 459px;
@@ -195,8 +195,8 @@ export const GalleryButtonImg = styled.img`
 `;
 
 export const BiggestSlierWrapper = styled.div`
-  width: 280px;
-  height: 250px;
+  width: 240px;
+  height: 240px;
 
   @media ${devices.tab} {
     width: 450px;
