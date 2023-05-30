@@ -13,6 +13,8 @@ export const Wrapper = styled.div`
   }
 
   @media ${devices.desk} {
+    margin: 0 auto;
+    max-width: 1200px;
     padding: 0;
   }
 `;

@@ -4,6 +4,7 @@ import { devices } from '../../common-styles/MediaQueries';
 export const SubscribeWrapper = styled.div`
   display: flex;
   width: 100%;
+  margin: 0 auto;
   justify-content: space-between;
   height: 212px;
   border-radius: 32px;
@@ -14,7 +15,7 @@ export const SubscribeWrapper = styled.div`
   background: linear-gradient(151deg, rgb(173, 198, 246) 11%, rgb(242, 253, 249) 55%, rgb(232, 234, 247) 90%);
 
   @media ${devices.tab} {
-    width: 100%;
+    max-width: 1200px;
     height: 312px;
   }
 `;

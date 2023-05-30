@@ -9,6 +9,8 @@ export const FooterWrapper = styled.div`
   align-items: center;
 
   @media ${devices.desk} {
+    margin: 0 auto;
+    max-width: 1200px;
     align-items: start;
     flex-direction: row;
   }
