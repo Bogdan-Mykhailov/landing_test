@@ -3,15 +3,20 @@ import { devices } from '../../common-styles/MediaQueries';
 
 export const SubscribeWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
   width: 100%;
-  height: 312px;
+  justify-content: space-between;
+  height: 212px;
   border-radius: 32px;
   background: -webkit-linear-gradient(299deg, rgb(173, 198, 246) 11%, rgb(242, 253, 249) 55%, rgb(232, 234, 247) 90%);
   background: -o-linear-gradient(299deg, rgb(173, 198, 246) 11%, rgb(242, 253, 249) 55%, rgb(232, 234, 247) 90%);
   background: -ms-linear-gradient(299deg, rgb(173, 198, 246) 11%, rgb(242, 253, 249) 55%, rgb(232, 234, 247) 90%);
   background: -moz-linear-gradient(299deg, rgb(173, 198, 246) 11%, rgb(242, 253, 249) 55%, rgb(232, 234, 247) 90%);
   background: linear-gradient(151deg, rgb(173, 198, 246) 11%, rgb(242, 253, 249) 55%, rgb(232, 234, 247) 90%);
+
+  @media ${devices.tab} {
+    width: 100%;
+    height: 312px;
+  }
 `;
 
 export const SubscribeLeftContent = styled.div`
