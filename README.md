@@ -1,6 +1,8 @@
 ![Logo](https://github.com/Bogdan-Mykhailov/landing_test/assets/91826635/0c4d5c0d-d9ae-41bc-9460-4b349670e8d4)
 ---
-<h4>The Hounter is a web application designed to help users find apartments, houses, or villas for rent. With a user-friendly interface and advanced search capabilities, this app simplifies the process of discovering suitable rental properties. Whether you're looking for a cozy apartment, a spacious house, or a luxurious villa, this app provides the necessary tools to browse and filter available listings.</h4>
+<h4>
+The Hunter is a sophisticated web application designed to revolutionize the way users search for rental properties such as apartments, houses, or villas. With its intuitive user interface and cutting-edge search capabilities, this app streamlines the process of discovering the perfect rental home. Whether you're seeking a cozy and compact apartment, a spacious and comfortable house, or an opulent and luxurious villa, The Hunter provides a comprehensive toolkit to effortlessly browse and filter through a vast array of available listings. This innovative platform goes beyond traditional property search methods, offering users a seamless and efficient experience in their quest for the ideal rental property.
+</h4>
 
 <hr/>
 <a href='https://bogdan-mykhailov.github.io/landing_test/' rel='nofollow'>
